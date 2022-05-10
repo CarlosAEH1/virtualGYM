@@ -18,11 +18,11 @@ Virtual Gym ofrece a sus clientes la posibilidad de adquirir un sensor que permi
 Finalmente, el cliente puede consultar en el sitio web el avance y el resumen de sus sesiones, por ejemplo, el sistema puede mostrarle gráficas en donde se muestra el historial de pérdida de calorías. Para generar reportes más completos, el cliente puede capturar periódicamente los datos de su peso y masa corporal y de ser necesario su estatura. Cada vez que el cliente realiza un ajuste en su peso, masa o inclusive estatura, se agrega un nuevo registro para mantener la historia o evolución de sus medidas.
 
 Requerimientos no funcionales:
--Se tiene un aproximado de 5,000 gimnasios distribuidos a lo largo del país. 
--Se requiere almacenar todas las mediciones de calorías que el cliente genera a lo largo de su estancia en los gimnasios de Virtual Gym.
--Se requiere almacenar toda la historia del material multimedia que tiene Virtual Gym para actualizar sus sitios web.
--Se requiere capacidad para realizar consultas estadísticas para poder mostrar el avance o progreso de un cliente.
--Cada gimnasio ha reportado hasta 1500 usuarios registrados durante un año, existen clientes que realizan hasta 5 rutinas por semana con una duración de hasta 2 hrs.
+<li>Se tiene un aproximado de 5,000 gimnasios distribuidos a lo largo del país.
+<li>Se requiere almacenar todas las mediciones de calorías que el cliente genera a lo largo de su estancia en los gimnasios de Virtual Gym.
+<li>Se requiere almacenar toda la historia del material multimedia que tiene Virtual Gym para actualizar sus sitios web.
+<li>Se requiere capacidad para realizar consultas estadísticas para poder mostrar el avance o progreso de un cliente.
+<li>Cada gimnasio ha reportado hasta 1500 usuarios registrados durante un año, existen clientes que realizan hasta 5 rutinas por semana con una duración de hasta 2 hrs.
 
 
 ## Diseno logico
