@@ -1,7 +1,7 @@
-#Proyecto BDA: Vitual GYM
+# Proyecto BDA: Vitual GYM
 
 
-##Caso de estudio
+##  Caso de estudio
 
 Virtual Gym es una empresa que cuenta con diversos gimnasios distribuidos en todo el país. Adicional a los servicios que ofrece en cada uno de sus gimnasios, la empresa ha decidido modernizarse a través de un proyecto que permite a sus clientes tomar clases en línea o a distancia, o inclusive en diferentes gimnasios a los que habitualmente acuden. Se registran los siguientes datos de cada gimnasio: folio de 5 caracteres, nombre, dirección, ubicación (latitud y longitud), teléfono principal, página web. Cada Gimnasio cuenta con una serie de contenido multimedia que se emplea para mantener actualizado el sitio web. Este contenido se guarda en la BD: imágenes y videos. A cada archivo se le asigna una vigencia. Posteriormente, el archivo ya no se emplea en el sitio web. Se desea mantener todo este material, aunque ya esté fuera de línea.
 
@@ -25,27 +25,27 @@ Requerimientos no funcionales:
 -Cada gimnasio ha reportado hasta 1500 usuarios registrados durante un año, existen clientes que realizan hasta 5 rutinas por semana con una duración de hasta 2 hrs.
 
 
-##Diseno logico
+## Diseno logico
 
-![](Diseno Logico/diseno.jpg)
+![](DisenoLogico/diseno.jpg)
 
 
-##Creacion de BD
+## Creacion de BD
 
-###Scripts
+### Scripts
 
-###Configuracion inicial
+### Configuracion inicial
 |Configuración|Descripción|
 |:-----------:|:---------------------------:|
-|Archivos de control|<ul><li>'/u01/disk1/control01.ctl'</li><li>'/u01/disk2/control02.ctl'</li><li>'/u01/disk3/control03.ctl'</li></ul>|
-|Propuesta de grupos REDO|3 grupos REDO, con 3 archivos cada uno|
-|Propuesta de juego de caracteres|Character set: 'AL32UTF8'. National character set: 'AL16UTF16'|
-|Tamaño del bloque de datos|512 Bytes|
-|Parámetros para creacion de BD|<ul><li>db_name: elrobda</li><li>memory_target: 5G</li><li>control_files:<br> '(/u01/disk1/control01.ctl'<br>'/u01/disk2/control02.ctl'<br>'/u01/disk3/control03.ctl)'</li></ul>|
-|Archivo de passwords|<ul><li>'sys'</li><li>'sysbackup'</li></ul>
+|Archivos de control|`/u01/disk1/control01.ctl`<br>`/u01/disk2/control02.ctl`<br>`/u01/disk3/control03.ctl`|
+|Propuesta de grupos REDO|3 grupos REDO, cada uno contiene 3 archivos REDO.|
+|Propuesta de juego de caracteres|`character set AL32UTF8`<br>`national character set AL16UTF16`|
+|Tamaño del bloque de datos|`512B`|
+|Parámetros para creacion de BD|`db_name=elrobda`<br>`memory_target=5G`<br>`control_files=(/u01/disk1/control01.ctl, /u01/disk2/control02.ctl, /u01/disk3/control03.ctl)`|
+|Archivo de passwords|`sys`<br>`sysbackup`|
 
-###Modulos del sistema
+### Modulos del sistema
 |Nombre del módulo|Descripción|Usuario|
 |:---------------:|:---------:|:-----:|
-|Gimnasio|Objetos relacionados con la organizacion e infraestructura del gimnasio.|gimnasio01|
-|Cliente|Objetos relacionados con la actividad de los clientes.|cliente01|
+|Gimnasio|Objetos relacionados con la organizacion e infraestructura del gimnasio.|`gimnasio01`|
+|Cliente|Objetos relacionados con la actividad de los clientes.|`cliente01`|
