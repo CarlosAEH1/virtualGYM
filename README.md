@@ -47,5 +47,71 @@ Requerimientos no funcionales:
 ### Módulos del sistema
 |Nombre del módulo|Descripción|Usuario|
 |:---------------:|:---------:|:-----:|
-|Gimnasio|Objetos relacionados con la organización e infraestructura del gimnasio.|`gimnasio01`|
-|Cliente|Objetos relacionados con la actividad de los clientes.|`cliente01`|
+|gimnasio|Objetos relacionados con la organización e infraestructura del gimnasio.|`gimnasio01`|
+|cliente|Objetos relacionados con la actividad de los clientes.|`cliente01`|
+
+### Esquemas por módulo
+|Nombre de la tabla|Nombre del módulo|
+|:----------------:|:---------------:|
+|`PUESTO`|gimnasio|
+|`EMPLEADO`|gimnasio|
+|`ADMINISTRADOR`|gimnasio|
+|`CLIENTE`|cliente|
+|`CREDENCIAL`|cliente|
+|`DISCIPLINA`|gimnasio|
+|`STATUS`|gimnasio|
+|`GIMNASIO`|gimnasio|
+|`SALA`|gimnasio|
+|`TIPO_DISPOSITIVO`|gimnasio|
+|`DISPOSITIVO`|gimnasio|
+|`HUELLA`|gimnasio|
+|`INSTRUCTOR`|cliente|
+|`INSTRUCTOR_WEB`|cliente|
+|`MULTIMEDIA`|gimnasio|
+|`REPORTE`|cliente|
+|`SALA_DISCIPLINA`|gimnasio|
+|`SENSOR`|cliente|
+|`SESION`|cliente|
+|`BITACORA`|cliente|
+|`SESION_DISPOSITIVO`|cliente|
+|`STATUS_DISPOSITIVO`|gimnasio|
+
+### Esquema de indexado
+|Módulo|Nombre de la tabla|Nombre del índice|Tipo|Propósito|
+|:----:|:----------------:|:---------------:|:--:|:-------:|
+|gimnasio|`PUESTO`|`puesto_clave_ux`|`unique`|Regla de negocio|
+|gimnasio|`EMPLEADO`|`empleado_curp_ux`|`unique`|Regla de negocio|
+|gimnasio|`EMPLEADO`|`empleado_num_trabajador_ux`|`unique`|Regla de negocio|
+|gimnasio|`EMPLEADO`|`empleado_rfc_ux`|`unique`|Regla de negocio|
+|gimnasio|`EMPLEADO`|`empleado_email_ux`|`unique`|Regla de negocio|
+|gimnasio|`ADMINISTRADOR`|`administrador_username_ux`|`unique`|Regla de negocio|
+|cliente|`CLIENTE`|`cliente_email_ux`|`unique`|Regla de negocio|
+|cliente|`CLIENTE`|`cliente_username_ux`|`unique`|Regla de negocio|
+|cliente|`CLIENTE`|`cliente_curp_ux`|`unique`|Regla de negocio|
+|cliente|`CREDENCIAL`|`credencial_folio_ux`|`unique`|Regla de negocio|
+|cliente|`CREDENCIAL`|`credencial_cod_barras_ux`|`unique`|Regla de negocio|
+|gimnasio|`DISCIPLINA`|`disciplina_clave_ux`|`unique`|Regla de negocio|
+|gimnasio|`GIMNASIO`|`gimnasio_folio_ux`|`unique`|Regla de negocio|
+|gimnasio|`GIMNASIO`|`gimnasio_url_ux`|`unique`|Regla de negocio|
+|gimnasio|`SALA`|`sala_clave_ux`|`unique`|Regla de negocio|
+|gimnasio|`DISPOSITIVO`|`dispositivo_num_inventario_ux`|`unique`|Regla de negocio|
+|gimnasio|`DISPOSITIVO`|`dispositivo_status_id_ix`|`non unique`|Mejora en desempeño|
+|cliente|`INSTRUCTOR`|`instructor_cedula_profesional_ux`|`unique`|Regla de negocio|
+|cliente|`INSTRUCTOR_WEB`|`instructor_web_ux`|`unique`|Regla de negocio|
+|gimnasio|`MULTIMEDIA`|`multimedia_vigencia_fin_ix`|`non unique`|Mejora en desempeño|
+|gimnasio|`MULTIMEDIA`|`multimedia_gimnasio_id_ix`|`non unique`|Mejora en desempeño|
+|cliente|`REPORTE`|`reporte_fecha_ix`|`non unique`|Mejora en desempeño|
+|cliente|`REPORTE`|`reporte_cliente_id_ix`|`non unique`|Mejora en desempeño|
+|cliente|`SENSOR`|`sensor_num_serie_ux`|`unique`|Regla de negocio|
+|cliente|`SESION`|`sesion_num_sesion_ux`|`unique`|Regla de negocio|
+|cliente|`SESION`|`sesion_fecha_inicio_ix`|`non unique`|Mejora en desempeño|
+|cliente|`SESION`|`sesion_emp_inst_id_ix`|`non unique`|Mejora en desempeño|
+|cliente|`SESION`|`sesion_cliente_id_ix`|`non unique`|Mejora en desempeño|
+|cliente|`SESION`|`sesion_sala_id_ix`|`non unique`|Mejora en desempeño|
+|cliente|`BITACORA`|`bitacora_fecha_ix`|`non unique`|Mejora en desempeño|
+|cliente|`BITACORA`|`bitacora_sesion_id_ix`|`non unique`|Mejora en desempeño|
+|cliente|`SESION_DISPOSITIVO`|`sesion_dispositivo_sesion_id_ix`|`non unique`|Mejora en desempeño|
+|cliente|`SESION_DISPOSITIVO`|`sesion_dispositivo_dispositivo_id_ix`|`non unique`|Mejora en desempeño|
+|gimnasio|`STATUS_DISPOSITIVO`|`status_dispositivo_fecha_status_ix`|`non unique`|Mejora en desempeño|
+|gimnasio|`STATUS_DISPOSITIVO`|`status_dispositivo_dispositivo_id_ix`|`non unique`|Mejora en desempeño|
+|gimnasio|`STATUS_DISPOSITIVO`|`status_dispositivo_status_id_ix`|`non unique`|Mejora en desempeño|
