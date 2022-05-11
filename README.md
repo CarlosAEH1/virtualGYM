@@ -25,27 +25,27 @@ Requerimientos no funcionales:
 <li>Cada gimnasio ha reportado hasta 1500 usuarios registrados durante un año, existen clientes que realizan hasta 5 rutinas por semana con una duración de hasta 2 hrs.
 
 
-## Diseno logico
+## Diseño lógico
 
-![](DisenoLogico/diseno.jpg)
+![](DISENO_LOGICO/diseno.jpg)
 
 
 ## Creacion de BD
 
 ### Scripts
 
-### Configuracion inicial
+### Configuración inicial
 |Configuración|Descripción|
-|:-----------:|:---------------------------:|
-|Archivos de control|`/u01/disk1/control01.ctl`<br>`/u01/disk2/control02.ctl`<br>`/u01/disk3/control03.ctl`|
+|:-----------:|:---------:|
+|Archivos de control|`/unam-bda/d11/app/oracle/oradata/ELROPROY/control01.ctl`<br>`/unam-bda/d12/app/oracle/oradata/ELROPROY/control02.ctl`<br>`/unam-bda/d13/app/oracle/oradata/ELROPROY/control03.ctl`|
 |Propuesta de grupos REDO|3 grupos REDO, cada uno contiene 3 archivos REDO.|
 |Propuesta de juego de caracteres|`character set AL32UTF8`<br>`national character set AL16UTF16`|
 |Tamaño del bloque de datos|`512B`|
-|Parámetros para creacion de BD|`db_name=elrobda`<br>`memory_target=5G`<br>`control_files=(/u01/disk1/control01.ctl, /u01/disk2/control02.ctl, /u01/disk3/control03.ctl)`|
+|Parámetros para creacion de BD|`db_name=elroproy`<br>`memory_target=5G`<br>`control_files=(/unam-bda/d11/app/oracle/oradata/ELROPROY/control01.ctl, /unam-bda/d12/app/oracle/oradata/ELROPROY/control02.ctl, /unam-bda/d13/app/oracle/oradata/ELROPROY/control03.ctl)`|
 |Archivo de passwords|`sys`<br>`sysbackup`|
 
-### Modulos del sistema
+### Módulos del sistema
 |Nombre del módulo|Descripción|Usuario|
 |:---------------:|:---------:|:-----:|
-|Gimnasio|Objetos relacionados con la organizacion e infraestructura del gimnasio.|`gimnasio01`|
+|Gimnasio|Objetos relacionados con la organización e infraestructura del gimnasio.|`gimnasio01`|
 |Cliente|Objetos relacionados con la actividad de los clientes.|`cliente01`|
