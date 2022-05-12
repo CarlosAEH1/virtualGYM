@@ -38,10 +38,10 @@ Requerimientos no funcionales:
 |Configuración|Descripción|
 |:-----------:|:---------:|
 |Archivos de control|`/unam-bda/d11/app/oracle/oradata/ELROPROY/control01.ctl`<br>`/unam-bda/d12/app/oracle/oradata/ELROPROY/control02.ctl`<br>`/unam-bda/d13/app/oracle/oradata/ELROPROY/control03.ctl`|
-|Propuesta de grupos REDO|3 grupos REDO, cada uno contiene 3 archivos REDO.|
+|Propuesta de grupos REDO|3 grupos REDO, cada uno contiene 3 Redo Log Files.|
 |Propuesta de juego de caracteres|`character set AL32UTF8`<br>`national character set AL16UTF16`|
 |Tamaño del bloque de datos|`512B`|
-|Parámetros para creacion de BD|`db_name=elroproy`<br>`memory_target=5G`<br>`control_files=(/unam-bda/d11/app/oracle/oradata/ELROPROY/control01.ctl, /unam-bda/d12/app/oracle/oradata/ELROPROY/control02.ctl, /unam-bda/d13/app/oracle/oradata/ELROPROY/control03.ctl)`|
+|Parámetros para creacion de BD|`db_name=elroproy`<br>`memory_target=1G`<br>`control_files=(/unam-bda/d11/app/oracle/oradata/ELROPROY/control01.ctl, /unam-bda/d12/app/oracle/oradata/ELROPROY/control02.ctl, /unam-bda/d13/app/oracle/oradata/ELROPROY/control03.ctl)`|
 |Archivo de passwords|`sys`<br>`sysbackup`|
 
 ### Módulos del sistema
