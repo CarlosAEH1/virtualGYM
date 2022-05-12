@@ -33,6 +33,15 @@ Requerimientos no funcionales:
 ## Creacion de BD
 
 ### Scripts
+|Número|Nombre de script|Descripción|
+|:----:|:--------------:|:---------:|
+|1|[s-01-crea-loop-devices-root](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-01-crea-loop-devices-root.sh "s-01-crea-loop-devices-root")|Simula dispositivos de almacenamiento.|
+|2|[s-02-crea-pwd-oracle](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-02-crea-pwd-oracle.sh "s-02-crea-pwd-oracle")|Crea archivo de passwords.|
+|3|[s-03-crea-pfile-oracle](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-03-crea-pfile-oracle.sh "s-03-crea-pfile-oracle")|Crea archivo PFILE.|
+|4|[s-04-crea-spfile-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-04-crea-spfile-ordinario.sql "s-04-crea-spfile-ordinario")|Crea archivo SPIFILE.|
+|5|[s-05-crea-directorio-root](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-05-crea-directorio-root.sh "s-05-crea-directorio-root")|Crea directorios para BD.|
+|6|[s-06-crea-bd-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-06-crea-bd-ordinario.sql "s-06-crea-bd-ordinario")|Crea BD.|
+|7|[s-07-crea-diccionario-datos-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-07-crea-diccionario-datos-ordinario.sql "s-07-crea-diccionario-datos-ordinario")|Crea diccionario de datos.|
 
 ### Configuración inicial
 |Configuración|Descripción|
