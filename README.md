@@ -49,15 +49,15 @@ Requerimientos no funcionales:
 |Archivos de control|`/unam-bda/d11/app/oracle/oradata/ELROPROY/control01.ctl`<br>`/unam-bda/d12/app/oracle/oradata/ELROPROY/control02.ctl`<br>`/unam-bda/d13/app/oracle/oradata/ELROPROY/control03.ctl`|
 |Propuesta de grupos REDO|3 grupos REDO, cada uno contiene 3 Redo Log Files.|
 |Propuesta de juego de caracteres|`character set AL32UTF8`<br>`national character set AL16UTF16`|
-|Tamaño del bloque de datos|`8K`|
+|Tamaño del bloque de datos|`512K`|
 |Parámetros para creacion de BD|`db_name=elroproy`<br>`memory_target=1G`<br>`control_files=(/unam-bda/d11/app/oracle/oradata/ELROPROY/control01.ctl, /unam-bda/d12/app/oracle/oradata/ELROPROY/control02.ctl, /unam-bda/d13/app/oracle/oradata/ELROPROY/control03.ctl)`|
 |Archivo de passwords|`sys`<br>`sysbackup`|
 
 ### Módulos del sistema
 |Nombre del módulo|Descripción|Usuario|
 |:---------------:|:---------:|:-----:|
-|gimnasio|Objetos relacionados con la organización e infraestructura del gimnasio.|`gimnasio01`|
-|cliente|Objetos relacionados con la actividad de los clientes.|`cliente01`|
+|Gimnasio|Objetos relacionados con la organización e infraestructura del gimnasio.|`gimnasio01_us`|
+|Cliente|Objetos relacionados con la actividad de los clientes.|`usuario01_us`|
 
 ### Esquemas por módulo
 |Nombre de la tabla|Nombre del módulo|
@@ -128,4 +128,9 @@ Requerimientos no funcionales:
 
 ## Creación de tablespaces
 
-### Definición de tablespaces
+### Definición de tablespaces comunes
+|Nombre de tablespace|Configuración|
+|:------------------:|:-----------:|
+|indices_ts|`bigfile`<br>`512M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/indices_df.dbf`|
+|indices_blob_ts|`bigfile`<br>`512M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/indices_blob_df.dbf`|
+|blob_ts|`smallfile`<br>`1G`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/blob01_df.dbf`, `u01/app/oracle/oradata/ELROPROY/blob02_df.dbf`|
