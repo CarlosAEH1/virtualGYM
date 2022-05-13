@@ -4,7 +4,7 @@
 -- Project :      GYM_virtual.DM1
 -- Author :       carlos_amador1@comunidad.unam.mx
 --
--- Date Created : Thursday, May 12, 2022 01:37:05
+-- Date Created : Friday, May 13, 2022 18:03:20
 -- Target DBMS : Oracle 11g
 --
 
@@ -164,7 +164,7 @@ CREATE TABLE SESION(
     SESION_ID       NUMBER(10, 0)    NOT NULL,
     NUM_SESION      NUMBER(10, 0)    NOT NULL,
     FECHA_INICIO    DATE             NOT NULL,
-    DURACION        TIMESTAMP(6),
+    DURACION        DATE,
     FECHA_FIN       DATE             NOT NULL,
     TIPO            VARCHAR2(10)     NOT NULL,
     EMP_INST_ID     NUMBER(10, 0)    NOT NULL,
