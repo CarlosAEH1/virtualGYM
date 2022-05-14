@@ -56,8 +56,8 @@ Requerimientos no funcionales:
 ### Módulos del sistema
 |Nombre del módulo|Descripción|Usuario|
 |:---------------:|:---------:|:-----:|
-|Gimnasio|Objetos relacionados con la organización e infraestructura del gimnasio.|`gimnasio01_us`|
-|Cliente|Objetos relacionados con la actividad de los clientes.|`usuario01_us`|
+|Gimnasio|Objetos relacionados con la organización e infraestructura del gimnasio.|`gimnasio01`|
+|Cliente|Objetos relacionados con la actividad de los clientes.|`cliente01`|
 
 ### Esquemas por módulo
 |Nombre de la tabla|Nombre del módulo|
