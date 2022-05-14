@@ -39,9 +39,11 @@ Requerimientos no funcionales:
 |2|[s-02-crea-pwd-oracle](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-02-crea-pwd-oracle.sh "s-02-crea-pwd-oracle")|Crea archivo de passwords.|
 |3|[s-03-crea-pfile-oracle](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-03-crea-pfile-oracle.sh "s-03-crea-pfile-oracle")|Crea archivo PFILE.|
 |4|[s-04-crea-spfile-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-04-crea-spfile-ordinario.sql "s-04-crea-spfile-ordinario")|Crea archivo SPIFILE.|
-|5|[s-05-crea-directorio-root](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-05-crea-directorio-root.sh "s-05-crea-directorio-root")|Crea directorios para BD.|
+|5|[s-05-crea-directorios-root](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-05-crea-directorios-root.sh "s-05-crea-directorios-root")|Crea directorios para BD.|
 |6|[s-06-crea-bd-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-06-crea-bd-ordinario.sql "s-06-crea-bd-ordinario")|Crea BD.|
 |7|[s-07-crea-diccionario-datos-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-07-crea-diccionario-datos-ordinario.sql "s-07-crea-diccionario-datos-ordinario")|Crea diccionario de datos.|
+|8|[s-08-crea-tablespaces-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-08-crea-tablespaces-ordinario.sql "s-09-crea-tablespaces-ordinario")|Crea tablespaces.|
+|9|[s-09-crea-usuarios-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-08-crea-tablespaces-ordinario.sql "s-09-crea-usuarios-ordinario")|Crea usuarios y otorga permisos.|
 
 ### Configuración inicial
 |Configuración|Descripción|
@@ -260,3 +262,11 @@ Requerimientos no funcionales:
 |Gimnasio|Índice|`status_dispositivo_fecha_status_ix`|`indice_ts`|
 |Gimnasio|Índice|`status_dispositivo_dispositivo_id_ix`|`indice_ts`|
 |Gimnasio|Índice|`status_dispositivo_status_id_ix`|`indice_ts`|
+
+
+## Creación de usuarios
+
+|Nombre de usuario|Default tablespace|Default temporary tablespace|Default undo tablespace|Privilegios asignados|
+|:---------------:|:----------------:|:--------------------------:|:---------------------:|:-------------------:|
+|`gimnasio01`|`gimnasios_ts`|||`create session`<br>`create table`<br>`create sequence`<br>`create procedure`<br>`create trigger`<br>`create synonym`<br>`create view`|
+|`cliente01`|`clientes_ts`|||`create session`<br>`create table`<br>`create sequence`<br>`create procedure`<br>`create trigger`<br>`create synonym`<br>`create view`|
