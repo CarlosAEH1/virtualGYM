@@ -67,7 +67,7 @@ Requerimientos no funcionales:
 |`PUESTO`|Gimnasio|
 |`EMPLEADO`|Gimnasio|
 |`ADMINISTRADOR`|Gimnasio|
-|`INSTRUCTOR`|Cliente|
+|`INSTRUCTOR`|Gimnasio|
 |`CLIENTE`|Cliente|
 |`GIMNASIO`|Gimnasio|
 |`SALA`|Gimnasio|
@@ -79,7 +79,7 @@ Requerimientos no funcionales:
 |`TIPO_DISPOSITIVO`|Gimnasio|
 |`DISPOSITIVO`|Gimnasio|
 |`HUELLA`|Gimnasio|
-|`INSTRUCTOR_WEB`|Cliente|
+|`INSTRUCTOR_WEB`|Gimnasio|
 |`MULTIMEDIA`|Gimnasio|
 |`REPORTE`|Cliente|
 |`SALA_DISCIPLINA`|Gimnasio|
@@ -96,7 +96,7 @@ Requerimientos no funcionales:
 |Gimnasio|`EMPLEADO`|`empleado_rfc_ux`|`unique`|Regla de negocio|
 |Gimnasio|`EMPLEADO`|`empleado_email_ux`|`unique`|Regla de negocio|
 |Gimnasio|`ADMINISTRADOR`|`administrador_username_ux`|`unique`|Regla de negocio|
-|Cliente|`INSTRUCTOR`|`instructor_cedula_profesional_ux`|`unique`|Regla de negocio|
+|Gimnasio|`INSTRUCTOR`|`instructor_cedula_profesional_ux`|`unique`|Regla de negocio|
 |Cliente|`CLIENTE`|`cliente_email_ux`|`unique`|Regla de negocio|
 |Cliente|`CLIENTE`|`cliente_username_ux`|`unique`|Regla de negocio|
 |Cliente|`CLIENTE`|`cliente_curp_ux`|`unique`|Regla de negocio|
@@ -115,7 +115,7 @@ Requerimientos no funcionales:
 |Gimnasio|`DISCIPLINA`|`disciplina_clave_ux`|`unique`|Regla de negocio|
 |Gimnasio|`DISPOSITIVO`|`dispositivo_num_inventario_ux`|`unique`|Regla de negocio|
 |Gimnasio|`DISPOSITIVO`|`dispositivo_status_id_ix`|`non unique`|Mejora en desempeño|
-|Cliente|`INSTRUCTOR_WEB`|`instructor_web_ux`|`unique`|Regla de negocio|
+|Gimnasio|`INSTRUCTOR_WEB`|`instructor_web_ux`|`unique`|Regla de negocio|
 |Gimnasio|`MULTIMEDIA`|`multimedia_vigencia_fin_ix`|`non unique`|Mejora en desempeño|
 |Gimnasio|`MULTIMEDIA`|`multimedia_gimnasio_id_ix`|`non unique`|Mejora en desempeño|
 |Cliente|`REPORTE`|`reporte_fecha_ix`|`non unique`|Mejora en desempeño|
@@ -168,9 +168,9 @@ Requerimientos no funcionales:
 |Gimnasio|Índice|`administrador_username_ux`|`indice_ts`|
 |Gimnasio|Índice|`administrador_certificado_ix`|`indice_blob_ts`|
 |Gimnasio|Columna|`administrador_certificado`|`blob_ts`|
-|Cliente|Tabla|`INSTRUCTOR`|`empleados_ts`|
-|Cliente|Índice|`instructor_id`|`indice_ts`|
-|Cliente|Índice|`instructor_cedula_profesional_ux`|`indice_ts`|
+|Gimnasio|Tabla|`INSTRUCTOR`|`empleados_ts`|
+|Gimnasio|Índice|`instructor_id`|`indice_ts`|
+|Gimnasio|Índice|`instructor_cedula_profesional_ux`|`indice_ts`|
 |Cliente|Tabla|`CLIENTE`|`clientes_ts`|
 |Cliente|Índice|`cliente_id`|`indice_ts`|
 |Cliente|Índice|`cliente_email_ux`|`indice_ts`|
@@ -235,9 +235,9 @@ Requerimientos no funcionales:
 |Gimnasio|Columna|`huella7`|`blob_ts`|
 |Gimnasio|Columna|`huella8`|`blob_ts`|
 |Gimnasio|Columna|`huella9`|`blob_ts`|
-|Cliente|Tabla|`INSTRUCTOR_WEB`|`empleados_ts`|
-|Cliente|Índice|`instructor_web_id`|`indice_ts`|
-|Cliente|Índice|`instructor_web_ux`|`indice_ts`|
+|Gimnasio|Tabla|`INSTRUCTOR_WEB`|`empleados_ts`|
+|Gimnasio|Índice|`instructor_web_id`|`indice_ts`|
+|Gimnasio|Índice|`instructor_web_ux`|`indice_ts`|
 |Gimnasio|Tabla|`MULTIMEDIA`|`instalaciones_ts`|
 |Gimnasio|Índice|`multimedia_id`|`indice_ts`|
 |Gimnasio|Índice|`multimedia_vigencia_fin_ix`|`indice_ts`|
