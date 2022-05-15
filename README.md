@@ -90,42 +90,25 @@ Requerimientos no funcionales:
 ### Esquema de indexado
 |Módulo|Nombre de la tabla|Nombre del índice|Tipo|Propósito|
 |:----:|:----------------:|:---------------:|:--:|:-------:|
-|Gimnasio|`PUESTO`|`puesto_clave_ux`|`unique`|Regla de negocio|
-|Gimnasio|`EMPLEADO`|`empleado_curp_ux`|`unique`|Regla de negocio|
-|Gimnasio|`EMPLEADO`|`empleado_num_trabajador_ux`|`unique`|Regla de negocio|
-|Gimnasio|`EMPLEADO`|`empleado_rfc_ux`|`unique`|Regla de negocio|
-|Gimnasio|`EMPLEADO`|`empleado_email_ux`|`unique`|Regla de negocio|
-|Gimnasio|`ADMINISTRADOR`|`administrador_username_ux`|`unique`|Regla de negocio|
-|Gimnasio|`INSTRUCTOR`|`instructor_cedula_profesional_ux`|`unique`|Regla de negocio|
-|Cliente|`CLIENTE`|`cliente_email_ux`|`unique`|Regla de negocio|
-|Cliente|`CLIENTE`|`cliente_username_ux`|`unique`|Regla de negocio|
-|Cliente|`CLIENTE`|`cliente_curp_ux`|`unique`|Regla de negocio|
-|Gimnasio|`GIMNASIO`|`gimnasio_folio_ux`|`unique`|Regla de negocio|
-|Gimnasio|`GIMNASIO`|`gimnasio_url_ux`|`unique`|Regla de negocio|
-|Gimnasio|`SALA`|`sala_clave_ux`|`unique`|Regla de negocio|
-|Cliente|`SESION`|`sesion_num_sesion_ux`|`unique`|Regla de negocio|
-|Cliente|`SESION`|`sesion_fecha_inicio_ix`|`non unique`|Mejora en desempeño|
-|Cliente|`SESION`|`sesion_emp_inst_id_ix`|`non unique`|Mejora en desempeño|
-|Cliente|`SESION`|`sesion_cliente_id_ix`|`non unique`|Mejora en desempeño|
-|Cliente|`SESION`|`sesion_sala_id_ix`|`non unique`|Mejora en desempeño|
-|Cliente|`BITACORA`|`bitacora_fecha_ix`|`non unique`|Mejora en desempeño|
-|Cliente|`BITACORA`|`bitacora_sesion_id_ix`|`non unique`|Mejora en desempeño|
-|Cliente|`CREDENCIAL`|`credencial_folio_ux`|`unique`|Regla de negocio|
-|Cliente|`CREDENCIAL`|`credencial_cod_barras_ux`|`unique`|Regla de negocio|
-|Gimnasio|`DISCIPLINA`|`disciplina_clave_ux`|`unique`|Regla de negocio|
-|Gimnasio|`DISPOSITIVO`|`dispositivo_num_inventario_ux`|`unique`|Regla de negocio|
-|Gimnasio|`DISPOSITIVO`|`dispositivo_status_id_ix`|`non unique`|Mejora en desempeño|
-|Gimnasio|`INSTRUCTOR_WEB`|`instructor_web_ux`|`unique`|Regla de negocio|
-|Gimnasio|`MULTIMEDIA`|`multimedia_vigencia_fin_ix`|`non unique`|Mejora en desempeño|
-|Gimnasio|`MULTIMEDIA`|`multimedia_gimnasio_id_ix`|`non unique`|Mejora en desempeño|
-|Cliente|`REPORTE`|`reporte_fecha_ix`|`non unique`|Mejora en desempeño|
-|Cliente|`REPORTE`|`reporte_cliente_id_ix`|`non unique`|Mejora en desempeño|
-|Cliente|`SENSOR`|`sensor_num_serie_ux`|`unique`|Regla de negocio|
-|Cliente|`SESION_DISPOSITIVO`|`sesion_dispositivo_sesion_id_ix`|`non unique`|Mejora en desempeño|
-|Cliente|`SESION_DISPOSITIVO`|`sesion_dispositivo_dispositivo_id_ix`|`non unique`|Mejora en desempeño|
-|Gimnasio|`STATUS_DISPOSITIVO`|`status_dispositivo_fecha_status_ix`|`non unique`|Mejora en desempeño|
-|Gimnasio|`STATUS_DISPOSITIVO`|`status_dispositivo_dispositivo_id_ix`|`non unique`|Mejora en desempeño|
-|Gimnasio|`STATUS_DISPOSITIVO`|`status_dispositivo_status_id_ix`|`non unique`|Mejora en desempeño|
+|Gimnasio|`EMPLEADO`|`EMPLEADO_PUESTO_ID_IX`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`GIMNASIO`|`GIMNASIO_GERENTE_ID_IX`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`SALA`|`SALA_GIMNASIO_ID_IX`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`SALA`|`SALA_EMP_ADMIN_ID_IX`|`non unique`|Mejorar desempeño.|
+|Cliente|`SESION`|`SESION_EMP_INST_ID_IX`|`non unique`|Mejorar desempeño.|
+|Cliente|`SESION`|`SESION_CLIENTE_ID_IX`|`non unique`|Mejorar desempeño.|
+|Cliente|`SESION`|`SESION_SALA_ID_IX`|`non unique`|Mejorar desempeño.|
+|Cliente|`BITACORA`|`BITACORA_SESION_ID_IX`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`DISPOSITIVO`|`DISPOSITIVO_TIPO_ID_IX`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`DISPOSITIVO`|`DISPOSITIVO_SALA_ID_IX`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`DISPOSITIVO`|`DISPOSITIVO_STATUS_ID_IX`|`non unique`|Mejorar desempeño.|
+|Cliente|`REPORTE`|`REPORTE_CLIENTE_ID_IX`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`SALA_DISCIPLINA`|`SALA_DISCIPLINA_SALA_ID_IX`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`SALA_DISCIPLINA`|`SALA_DISCIPLINA_ID_IX`|`non unique`|Mejorar desempeño.|
+|Cliente|`SENSOR`|`SENSOR_CLIENTE_ID_IX`|`non unique`|Mejorar desempeño.|
+|Cliente|`SENSOR`|`SESION_DISPOSITIVO_SESON_ID_IX`|`non unique`|Mejorar desempeño.|
+|Cliente|`SENSOR`|`SESION_DISPOSITIVO_ID_IX`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`STATUS_DISPOSITIVO`|`STATUS_DISPOSITIVO_ID_IX`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`STATUS_DISPOSITIVO`|`STATUS_DISPOSITIVO_STATU_ID_IX`|`non unique`|Mejorar desempeño.|
 
 
 ## Creación de tablespaces
@@ -133,6 +116,7 @@ Requerimientos no funcionales:
 ### Definición de tablespaces comunes
 |Nombre de tablespace|Configuración|
 |:------------------:|:-----------:|
+|`indices_ts`|`bigfile`<br>`512M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`/u01/app/oracle/oradata/ELROPROY/disk02/indices_df.dbf`|
 |`blob_ts`|`smallfile`<br>`1G`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk03/blob01_df.dbf`, `u01/app/oracle/oradata/ELROPROY/disk04/blob02_df.dbf`|
 
 ### Definición de tablespaces comunes
@@ -143,7 +127,7 @@ Requerimientos no funcionales:
 |Gimnasio|`inventario_ts`|Almacenar registros de estado de dispositivo.|`bigfile`<br>`1G`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk07/inventario_df.dbf`|
 |Gimnasio|`empleados_ts`|Almacenar registros de la organizacion.|`bigfile`<br>`1G`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk08/empleados_df.dbf`|
 |Gimnasio|`huellas_ts`|Optimizar consultas a tabla EMPLEADO.|`bigfile`<br>`1G`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk09/huellas_df.dbf`|
-|Cliente|`clientes_ts`|Almacenar registros de usuario.|`bigfile`<br>`1G`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk10/clientes_df.dbf`|
+|Cliente|`clientes_ts`|Almacenar registros de usuario.|`bigfile`<br>`512M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk10/clientes_df.dbf`|
 |Cliente|`sesiones_ts`|Almacenar registros de actividad de usuario.|`bigfile`<br>`1G`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk11/sesiones_df.dbf`|
 |Cliente|`historial_ts`|Almacenar registros históricos de usuario.|`smallfile`<br>`1G`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk12/historial01_df.dbf`, `u01/app/oracle/oradata/ELROPROY/disk13/historial02_df.dbf`|
 
@@ -151,77 +135,96 @@ Requerimientos no funcionales:
 |Módulo|Tipo de segmento|Nombre de segmento|Nombre de tablespace|
 |:----:|:--------------:|:----------------:|:------------------:|
 |Gimnasio|Tabla|`PUESTO`|`empleados_ts`|
-|Gimnasio|Índice|`puesto_clave_ux`|`indice_ts`|
+|Gimnasio|Índice|`puesto_pk`|`empleados_ts`|
 |Gimnasio|Tabla|`EMPLEADO`|`empleados_ts`|
-|Gimnasio|Índice|`empleado_curp_ux`|`indice_ts`|
-|Gimnasio|Índice|`empleado_num_trabajador_ux`|`indice_ts`|
-|Gimnasio|Índice|`empleado_rfc_ux`|`indice_ts`|
-|Gimnasio|Índice|`empleado_email_ux`|`indice_ts`|
+|Gimnasio|Índice|`empleado_pk`|`empleados_ts`|
+|Gimnasio|Índice|`empleado_puesto_id_ix`|`indices_ts`|
+|Gimnasio|Índice|`empleado_foto_blob_ix`|`empleados_ts`|
 |Gimnasio|Columna|`empleado_foto`|`blob_ts`|
 |Gimnasio|Tabla|`ADMINISTRADOR`|`empleados_ts`|
-|Gimnasio|Índice|`administrador_username_ux`|`indice_ts`|
+|Gimnasio|Índice|`administrador_pk`|`empleados_ts`|
+|Gimnasio|Índice|`administrador_certificado_blob_ix`|`empleados_ts`|
 |Gimnasio|Columna|`administrador_certificado`|`blob_ts`|
 |Gimnasio|Tabla|`INSTRUCTOR`|`empleados_ts`|
-|Gimnasio|Índice|`instructor_cedula_profesional_ux`|`indice_ts`|
+|Gimnasio|Índice|`instructor_pk`|`empleados_ts`|
 |Cliente|Tabla|`CLIENTE`|`clientes_ts`|
-|Cliente|Índice|`cliente_email_ux`|`indice_ts`|
-|Cliente|Índice|`cliente_username_ux`|`indice_ts`|
-|Cliente|Índice|`cliente_curp_ux`|`indice_ts`|
+|Cliente|Índice|`cliente_pk`|`clientes_ts`|
+|Cliente|Índice|`cliente_foto_blob_ix`|`clientes_ts`|
 |Cliente|Columna|`cliente_foto`|`blob_ts`|
 |Gimnasio|Tabla|`GIMNASIO`|`instalaciones_ts`|
-|Gimnasio|Índice|`gimnasio_folio_ux`|`indice_ts`|
-|Gimnasio|Índice|`gimnasio_url_ux`|`indice_ts`|
+|Gimnasio|Índice|`gimnasio_pk`|`instalaciones_ts`|
 |Gimnasio|Tabla|`SALA`|`salas_ts`|
-|Gimnasio|Índice|`sala_clave_ux`|`indice_ts`|
+|Gimnasio|índice|`sala_pk`|`salas_ts`|
+|Gimnasio|Índice|`sala_gimnasio_id_ix`|`indices_ix`|
+|Gimnasio|Índice|`sala_emp_admin_id_ix`|`indices_ix`|
 |Cliente|Tabla|`SESION`|`sesiones_ts`|
-|Cliente|Índice|`sesion_num_sesion_ux`|`indice_ts`|
-|Cliente|Índice|`sesion_fecha_inicio_ix`|`indice_ts`|
-|Cliente|Índice|`sesion_emp_inst_id_ix`|`indice_ts`|
-|Cliente|Índice|`sesion_cliente_id_ix`|`indice_ts`|
-|Cliente|Índice|`sesion_sala_id_ix`|`indice_ts`|
+|Cliente|Índice|`sesion_pk`|`sesiones_ts`|
+|Cliente|Índice|`sesion_emp_inst_id_ix`|`indices_ts`|
+|Cliente|Índice|`sesion_cliente_id_ix`|`indices_ts`|
+|Cliente|Índice|`sesion_sala_id_ix`|`indices_ts`|
 |Cliente|Tabla|`BITACORA`|`historial_ts`|
-|Cliente|Índice|`bitacora_fecha_ix`|`indice_ts`|
+|Cliente|Índice|`bitacora_pk`|`historial_ts`|
 |Cliente|Índice|`bitacora_sesion_id_ix`|`indice_ts`|
 |Cliente|Tabla|`CREDENCIAL`|`clientes_ts`|
-|Cliente|Índice|`credencial_folio_ux`|`indice_ts`|
-|Cliente|Índice|`credencial_cod_barras_ux`|`indice_ts`|
+|Cliente|Índice|`credencial_pk`|`clientes_ts`|
 |Gimnasio|Tabla|`DISCIPLINA`|`salas_ts`|
-|Gimnasio|Índice|`disciplina_clave_ux`|`indice_ts`|
+|Gimnasio|Índice|`disciplina_pk`|`salas_ts`|
+|Gimnasio|Columna|`disciplina_icono_blob_ix`|`salas_ts`|
 |Gimnasio|Columna|`disciplina_icono`|`blob_ts`|
 |Gimnasio|Tabla|`STATUS`|`inventario_ts`|
+|Gimnasio|Índice|`status_pk`|`inventario_ts`|
 |Gimnasio|Tabla|`TIPO_DISPOSITIVO`|`inventario_ts`|
-|Gimnasio|Índice|`tipo_dispositivo_id`|`indice_ts`|
+|Gimnasio|Índice|`tipo_dispositivo_pk`|`inventario_ts`|
 |Gimnasio|Tabla|`DISPOSITIVO`|`inventario_ts`|
-|Gimnasio|Índice|`dispositivo_num_inventario_ux`|`indice_ts`|
-|Gimnasio|Índice|`dispositivo_status_id_ix`|`indice_ts`|
+|Gimnasio|Índice|`dispositivo_pk`|`inventario_ts`|
+|Gimnasio|Índice|`dispositivo_tipo_id_ix`|`indices_ts`|
+|Gimnasio|Índice|`dispositivo_sala_id_ix`|`indices_ts`|
+|Gimnasio|Índice|`dispositivo_status_id_ix`|`indices_ts`|
 |Gimnasio|Tabla|`HUELLA`|`huellas_ts`|
-|Gimnasio|Columna|`huella`|`blob_ts`|
-|Gimnasio|Columna|`huella1`|`blob_ts`|
-|Gimnasio|Columna|`huella2`|`blob_ts`|
-|Gimnasio|Columna|`huella3`|`blob_ts`|
-|Gimnasio|Columna|`huella4`|`blob_ts`|
-|Gimnasio|Columna|`huella5`|`blob_ts`|
-|Gimnasio|Columna|`huella6`|`blob_ts`|
-|Gimnasio|Columna|`huella7`|`blob_ts`|
-|Gimnasio|Columna|`huella8`|`blob_ts`|
-|Gimnasio|Columna|`huella9`|`blob_ts`|
+|Gimnasio|índice|`huella_pk`|`huellas_ts`|
+|Gimnasio|índice|`huella0_blob_ix`|`huellas_ts`|
+|Gimnasio|índice|`huella1_blob_ix`|`huellas_ts`|
+|Gimnasio|índice|`huella2_blob_ix`|`huellas_ts`|
+|Gimnasio|índice|`huella3_blob_ix`|`huellas_ts`|
+|Gimnasio|índice|`huella4_blob_ix`|`huellas_ts`|
+|Gimnasio|índice|`huella5_blob_ix`|`huellas_ts`|
+|Gimnasio|índice|`huella6_blob_ix`|`huellas_ts`|
+|Gimnasio|índice|`huella7_blob_ix`|`huellas_ts`|
+|Gimnasio|índice|`huella8_blob_ix`|`huellas_ts`|
+|Gimnasio|índice|`huella9_blob_ix`|`huellas_ts`|
+|Gimnasio|Columna|`huella_huella0`|`huellas_ts`|
+|Gimnasio|Columna|`huella_huella1`|`huellas_ts`|
+|Gimnasio|Columna|`huella_huella2`|`huellas_ts`|
+|Gimnasio|Columna|`huella_huella3`|`huellas_ts`|
+|Gimnasio|Columna|`huella_huella4`|`huellas_ts`|
+|Gimnasio|Columna|`huella_huella5`|`huellas_ts`|
+|Gimnasio|Columna|`huella_huella6`|`huellas_ts`|
+|Gimnasio|Columna|`huella_huella7`|`huellas_ts`|
+|Gimnasio|Columna|`huella_huella8`|`huellas_ts`|
+|Gimnasio|Columna|`huella_huella9`|`huellas_ts`|
 |Gimnasio|Tabla|`INSTRUCTOR_WEB`|`empleados_ts`|
-|Gimnasio|Índice|`instructor_web_ux`|`indice_ts`|
+|Gimnasio|Índice|`instructor_web_pk`|`empleados_ts`|
 |Gimnasio|Tabla|`MULTIMEDIA`|`instalaciones_ts`|
-|Gimnasio|Índice|`multimedia_vigencia_fin_ix`|`indice_ts`|
-|Gimnasio|Índice|`multimedia_gimnasio_id_ix`|`indice_ts`|
+|Gimnasio|Índice|`multimedia_pk`|`instalaciones_ts`|
+|Gimnasio|Índice|`multimedia_gimnasio_id_ix`|`indices_ts`|
+|Gimnasio|índice|`multimedia_contenido_blob_ix`|`instalaciones_ts`|
 |Gimnasio|Columna|`multimedia_contenido`|`blob_ts`|
 |Cliente|Tabla|`REPORTE`|`historial_ts`|
-|Cliente|Índice|`reporte_fecha_ix`|`indice_ts`|
-|Cliente|Índice|`reporte_cliente_id_ix`|`indice_ts`|
+|Cliente|Índice|`reporte_pk`|`historial_ts`|
+|Cliente|Índice|`reporte_cliente_id_ix`|`indicse_ts`|
 |Gimnasio|Tabla|`SALA_DISCIPLINA`|`salas_ts`|
-|Gimnasio|Índice|`sala_disciplina_id`|`indice_ts`|
+|Gimnasio|Índice|`sala_disciplina`|`salas_ts`|
+|Gimnasio|Índice|`sala_disciplina_sala_id_ix`|`indices_ts`|
+|Gimnasio|Índice|`sala_disciplina_id_ix`|`indices_ts`|
 |Cliente|Tabla|`SENSOR`|`clientes_ts`|
-|Cliente|Índice|`sensor_num_serie_ux`|`indice_ts`|
+|Cliente|Índice|`sensor_pk`|`clientes_ts`|
+|Cliente|Índice|`sensor_cliente_id_ix`|`indices_ts`|
 |Cliente|Tabla|`SESION_DISPOSITIVO`|`sesiones_ts`|
+|Cliente|Índice|`sesion_dispositivo_pk`|`sesiones_ts`|
 |Cliente|Índice|`sesion_dispositivo_sesion_id_ix`|`indice_ts`|
 |Cliente|Índice|`sesion_dispositivo_dispositivo_id_ix`|`indice_ts`|
 |Gimnasio|Tabla|`STATUS_DISPOSITIVO`|`inventario_ts`|
+|Gimnasio|Índice|`status_dispositivo`|`inventario_ts`|
 |Gimnasio|Índice|`status_dispositivo_fecha_status_ix`|`indice_ts`|
 |Gimnasio|Índice|`status_dispositivo_dispositivo_id_ix`|`indice_ts`|
 |Gimnasio|Índice|`status_dispositivo_status_id_ix`|`indice_ts`|

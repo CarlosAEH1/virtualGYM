@@ -16,14 +16,6 @@ cd ${ORACLE_SID^^}
 mkdir disk00
 chown oracle:oinstall disk00
 chmod 750 disk00
-cd disk00
-mkdir disk000
-chown oracle:oinstall disk000
-chmod 750 disk000
-mkdir disk001
-chown oracle:oinstall disk001
-chmod 750 disk001
-cd ..
 mkdir disk01
 chown oracle:oinstall disk01
 chmod 750 disk01

@@ -47,9 +47,8 @@ quota unlimited on salas_ts
 quota unlimited on inventario_ts
 quota unlimited on empleados_ts
 quota unlimited on huellas_ts
-quota unlimited on indices_ts
-quota unlimited on indices_blob_ts
-quota unlimited on blob_ts;
+quota unlimited on blob_ts
+quota unlimited on indices_ts;
 
 grant administracion to gimnasio01;
 
@@ -58,9 +57,8 @@ default tablespace clientes_ts
 quota unlimited on clientes_ts
 quota unlimited on sesiones_ts
 quota unlimited on historial_ts
-quota unlimited on indices_ts
-quota unlimited on indices_blob_ts
-quota unlimited on blob_ts;
+quota unlimited on blob_ts
+quota unlimited on indices_ts;
 
 grant administracion to cliente01;
 
