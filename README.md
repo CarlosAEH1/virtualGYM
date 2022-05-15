@@ -268,5 +268,5 @@ Requerimientos no funcionales:
 
 |Nombre de usuario|Default tablespace|Default temporary tablespace|Default undo tablespace|Privilegios asignados|
 |:---------------:|:----------------:|:--------------------------:|:---------------------:|:-------------------:|
-|`gimnasio01`|`gimnasios_ts`|||`create session`<br>`create table`<br>`create sequence`<br>`create procedure`<br>`create trigger`<br>`create synonym`<br>`create view`|
-|`cliente01`|`clientes_ts`|||`create session`<br>`create table`<br>`create sequence`<br>`create procedure`<br>`create trigger`<br>`create synonym`<br>`create view`|
+|`gimnasio01`|`gimnasios_ts`|`temp_ts`|`undo_ts`|`create session`<br>`create table`<br>`create sequence`<br>`create procedure`<br>`create trigger`<br>`create synonym`<br>`create view`|
+|`cliente01`|`clientes_ts`|`temp_ts`|`undo_ts`|`create session`<br>`create table`<br>`create sequence`<br>`create procedure`<br>`create trigger`<br>`create synonym`<br>`create view`|
