@@ -43,11 +43,11 @@ to administracion;
 create user gimnasio01 identified by gimnasio
 default tablespace instalaciones_ts
 quota unlimited on instalaciones_ts
-quota unlimited on salas_ts
 quota unlimited on inventario_ts
 quota unlimited on empleados_ts
 quota unlimited on huellas_ts
 quota unlimited on blob_ts
+quota unlimited on blob_indices_ts
 quota unlimited on indices_ts;
 
 grant administracion to gimnasio01;
@@ -58,6 +58,7 @@ quota unlimited on clientes_ts
 quota unlimited on sesiones_ts
 quota unlimited on historial_ts
 quota unlimited on blob_ts
+quota unlimited on blob_indices_ts
 quota unlimited on indices_ts;
 
 grant administracion to cliente01;

@@ -11,5 +11,6 @@ export ORACLE_SID=elroproy
 echo "Generando nuevo orapw${ORACLE_SID}"
 orapwd FILE='${ORACLE_HOME}/dbs/orapw${ORACLE_SID}' FORCE=Y FORMAT=12.2 \
 SYS="hola1234*"
+SYSBACKUP="sysbackup"
 echo "Verificando nuevo orapw${ORACLE_SID}"
 ls -l ${ORACLE_HOME}/dbs/orapw${ORACLE_SID}

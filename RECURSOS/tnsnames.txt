@@ -1,0 +1,32 @@
+ELROPROY_SHARED =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = pc-caeh.fi.unam)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = elroproy.fi.unam)
+      (SERVER = SHARED)
+    )
+  )
+
+ELROPROY_DEDICATED =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = pc-caeh.fi.unam)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = elroproy.fi.unam)
+      (SERVER = DEDICATED)
+    )
+  )
+
+ELROPROY =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = pc-caeh.fi.unam)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = elroproy.fi.unam)
+      (SERVER = DEDICATED)
+    )
+  )
