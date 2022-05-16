@@ -35,15 +35,16 @@ Requerimientos no funcionales:
 ### Scripts
 |Número|Nombre de script|Descripción|
 |:----:|:--------------:|:---------:|
-|1|[s-01-crea-loop-devices-root](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-01-crea-loop-devices-root.sh "s-01-crea-loop-devices-root")|Simula dispositivos de almacenamiento.|
-|2|[s-02-crea-pwd-oracle](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-02-crea-pwd-oracle.sh "s-02-crea-pwd-oracle")|Crea archivo de passwords.|
-|3|[s-03-crea-pfile-oracle](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-03-crea-pfile-oracle.sh "s-03-crea-pfile-oracle")|Crea archivo PFILE.|
-|4|[s-04-crea-spfile-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-04-crea-spfile-ordinario.sql "s-04-crea-spfile-ordinario")|Crea archivo SPIFILE.|
-|5|[s-05-crea-directorios-root](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-05-crea-directorios-root.sh "s-05-crea-directorios-root")|Crea directorios para BD.|
-|6|[s-06-crea-bd-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-06-crea-bd-ordinario.sql "s-06-crea-bd-ordinario")|Crea BD.|
-|7|[s-07-crea-diccionario-datos-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-07-crea-diccionario-datos-ordinario.sql "s-07-crea-diccionario-datos-ordinario")|Crea diccionario de datos.|
-|8|[s-08-crea-tablespaces-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-08-crea-tablespaces-ordinario.sql "s-09-crea-tablespaces-ordinario")|Crea tablespaces.|
-|9|[s-09-crea-usuarios-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-08-crea-tablespaces-ordinario.sql "s-09-crea-usuarios-ordinario")|Crea usuarios y otorga permisos.|
+|1|[s-01-crea-pwd-oracle](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-02-crea-pwd-oracle.sh "s-02-crea-pwd-oracle")|Crea archivo de passwords.|
+|2|[s-02-crea-pfile-oracle](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-03-crea-pfile-oracle.sh "s-03-crea-pfile-oracle")|Crea archivo PFILE.|
+|3|[s-03-crea-spfile-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-04-crea-spfile-ordinario.sql "s-04-crea-spfile-ordinario")|Crea archivo SPIFILE.|
+|4|[s-04-crea-directorios-root](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-05-crea-directorios-root.sh "s-05-crea-directorios-root")|Crea directorios para BD.|
+|5|[s-05-crea-bd-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-06-crea-bd-ordinario.sql "s-06-crea-bd-ordinario")|Crea BD.|
+|6|[s-06-crea-diccionario-datos-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-07-crea-diccionario-datos-ordinario.sql "s-07-crea-diccionario-datos-ordinario")|Crea diccionario de datos.|
+|7|[s-07-crea-tablespaces-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-08-crea-tablespaces-ordinario.sql "s-09-crea-tablespaces-ordinario")|Crea tablespaces.|
+|8|[s-08-crea-usuarios-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-08-crea-tablespaces-ordinario.sql "s-09-crea-usuarios-ordinario")|Crea usuarios y otorga permisos.|
+|9|[s-09-crea-objetos-00-ordinario.sql](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-09-crea-objetos-00-ordinario.sql "s-09-crea-objetos-00-ordinario.sql")|Crea objetos por módulo.|
+|10|[s-10-configura-modo-compartido-ordinario.sql](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-10-configura-modo-compartido-ordinario.sql "s-10-configura-modo-compartido-ordinario.sql")|Configura modo compartido.|
 
 ### Configuración inicial
 |Configuración|Descripción|
@@ -90,25 +91,48 @@ Requerimientos no funcionales:
 ### Esquema de indexado
 |Módulo|Nombre de la tabla|Nombre del índice|Tipo|Propósito|
 |:----:|:----------------:|:---------------:|:--:|:-------:|
-|Gimnasio|`EMPLEADO`|`EMPLEADO_PUESTO_ID_IX`|`non unique`|Mejorar desempeño.|
-|Gimnasio|`GIMNASIO`|`GIMNASIO_GERENTE_ID_IX`|`non unique`|Mejorar desempeño.|
-|Gimnasio|`SALA`|`SALA_GIMNASIO_ID_IX`|`non unique`|Mejorar desempeño.|
-|Gimnasio|`SALA`|`SALA_EMP_ADMIN_ID_IX`|`non unique`|Mejorar desempeño.|
-|Cliente|`SESION`|`SESION_EMP_INST_ID_IX`|`non unique`|Mejorar desempeño.|
-|Cliente|`SESION`|`SESION_CLIENTE_ID_IX`|`non unique`|Mejorar desempeño.|
-|Cliente|`SESION`|`SESION_SALA_ID_IX`|`non unique`|Mejorar desempeño.|
-|Cliente|`BITACORA`|`BITACORA_SESION_ID_IX`|`non unique`|Mejorar desempeño.|
-|Gimnasio|`DISPOSITIVO`|`DISPOSITIVO_TIPO_ID_IX`|`non unique`|Mejorar desempeño.|
-|Gimnasio|`DISPOSITIVO`|`DISPOSITIVO_SALA_ID_IX`|`non unique`|Mejorar desempeño.|
-|Gimnasio|`DISPOSITIVO`|`DISPOSITIVO_STATUS_ID_IX`|`non unique`|Mejorar desempeño.|
-|Cliente|`REPORTE`|`REPORTE_CLIENTE_ID_IX`|`non unique`|Mejorar desempeño.|
-|Gimnasio|`SALA_DISCIPLINA`|`SALA_DISCIPLINA_SALA_ID_IX`|`non unique`|Mejorar desempeño.|
-|Gimnasio|`SALA_DISCIPLINA`|`SALA_DISCIPLINA_ID_IX`|`non unique`|Mejorar desempeño.|
-|Cliente|`SENSOR`|`SENSOR_CLIENTE_ID_IX`|`non unique`|Mejorar desempeño.|
-|Cliente|`SENSOR`|`SESION_DISPOSITIVO_SESON_ID_IX`|`non unique`|Mejorar desempeño.|
-|Cliente|`SENSOR`|`SESION_DISPOSITIVO_ID_IX`|`non unique`|Mejorar desempeño.|
-|Gimnasio|`STATUS_DISPOSITIVO`|`STATUS_DISPOSITIVO_ID_IX`|`non unique`|Mejorar desempeño.|
-|Gimnasio|`STATUS_DISPOSITIVO`|`STATUS_DISPOSITIVO_STATU_ID_IX`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`PUESTO`|`puesto_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`EMPLEADO`|`empleado_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`EMPLEADO`|`empleado_puesto_id_ix`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`ADMINISTRADOR`|`administrador_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`INSTRUCTOR`|`instructor_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`CLIENTE`|`cliente_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`GIMNASIO`|`gimnasio_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`GIMNASIO`|`gimnasio_gerente_id_ix`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`SALA`|`sala_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`SALA`|`sala_gimnasio_id_ix`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`SALA`|`sala_emp_admin_id_ix`|`non unique`|Mejorar desempeño.|
+|Cliente|`SESION`|`sesion_pk`|`unique`|Regla de negocio.|
+|Cliente|`SESION`|`sesion_emp_inst_id_ix`|`non unique`|Mejorar desempeño.|
+|Cliente|`SESION`|`sesion_cliente_id_ix`|`non unique`|Mejorar desempeño.|
+|Cliente|`SESION`|`sesion_sala_id_id`|`non unique`|Mejorar desempeño.|
+|Cliente|`BITACORA`|`bitacora_pk`|`unique`|Regla de negocio.|
+|Cliente|`BITACORA`|`bitacora_sesion_id_ix`|`non unique`|Mejorar desempeño.|
+|Cliente|`CREDENCIAL`|`credencial_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`DISCIPLINA`|`disciplina_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`STATUS`|`status_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`TIPO_DISPOSITIVO`|`tipo_dispositivo_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`DISPOSITIVO`|`dispositivo_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`DISPOSITIVO`|`dispositivo_tipo_id_ix`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`DISPOSITIVO`|`dispositivo_sala_id_ix`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`DISPOSITIVO`|`dispositivo_status_id_ix`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`HUELLA`|`huella_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`INSTRUCTOR_WEB`|`instructor_web_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`MULTIMEDIA`|`multimedia_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`MULTIMEDIA`|`multimedia_gimnasio_id_ix`|`non unique`|Mejorar desempeño.|
+|Cliente|`REPORTE`|`reporte_pk`|`unique`|Regla de negocio.|
+|Cliente|`REPORTE`|`reporte_cliente_id_ix`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`SALA_DISCIPLINA`|`sala_disciplina_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`SALA_DISCIPLINA`|`sala_disciplina_sala_id_ix`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`SALA_DISCIPLINA`|`sala_disciplina_id_ix`|`non unique`|Mejorar desempeño.|
+|Cliente|`SENSOR`|`sensor_pk`|`unique`|Regla de negocio.|
+|Cliente|`SENSOR`|`sensor_cliente_id_ix`|`non unique`|Mejorar desempeño.|
+|Cliente|`SESION_DISPOSITIVO`|`sesion_dispositivo_pk`|`unique`|Regla de negocio.|
+|Cliente|`SESION_DISPOSITIVO`|`sesion_dispositivo_sesion_id_ix`|`non unique`|Mejorar desempeño.|
+|Cliente|`SESION_DISPOSITIVO`|`sesion_dispositivo_id_ix`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`STATUS_DISPOSITIVO`|`status_dispositivo_pk`|`unique`|Regla de negocio.|
+|Gimnasio|`STATUS_DISPOSITIVO`|`status_dispositivo_id_ix`|`non unique`|Mejorar desempeño.|
+|Gimnasio|`STATUS_DISPOSITIVO`|`status_DISPOSITIVO_status_id_id`|`non unique`|Mejorar desempeño.|
 
 
 ## Creación de tablespaces
@@ -116,72 +140,72 @@ Requerimientos no funcionales:
 ### Definición de tablespaces comunes
 |Nombre de tablespace|Configuración|
 |:------------------:|:-----------:|
-|`indices_ts`|`bigfile`<br>`512M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`/u01/app/oracle/oradata/ELROPROY/disk02/indices_df.dbf`|
-|`blob_ts`|`smallfile`<br>`1G`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk03/blob01_df.dbf`, `u01/app/oracle/oradata/ELROPROY/disk04/blob02_df.dbf`|
+|`indices_ts`|`bigfile`<br>`50M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`/u01/app/oracle/oradata/ELROPROY/disk02/indices_df.dbf`|
+|`blob_indices_ts`|`bigfile`<br>`50M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`/u01/app/oracle/oradata/ELROPROY/disk03/blob_indices_df.dbf`|
+|`blob_ts`|`smallfile`<br>`100M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk04/blob01_df.dbf`, `u01/app/oracle/oradata/ELROPROY/disk05/blob02_df.dbf`|
 
 ### Definición de tablespaces comunes
 |Modulo|Nombre de tablespace|Objetivo|Configuracion|
 |:----:|:------------------:|:------:|:-----------:|
-|Gimnasio|`instalaciones_ts`|Almacenar registros de sitio fisico y digital del gimnasio.|`bigfile`<br>`512M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk05/instalaciones_df.dbf`|
-|Gimnasio|`salas_ts`|Almacenar registros de disciplinas disponibles por sala.|`bigfile`<br>`512M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk06/salas_df.dbf`|
-|Gimnasio|`inventario_ts`|Almacenar registros de estado de dispositivo.|`bigfile`<br>`1G`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk07/inventario_df.dbf`|
-|Gimnasio|`empleados_ts`|Almacenar registros de la organizacion.|`bigfile`<br>`1G`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk08/empleados_df.dbf`|
-|Gimnasio|`huellas_ts`|Optimizar consultas a tabla EMPLEADO.|`bigfile`<br>`1G`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk09/huellas_df.dbf`|
-|Cliente|`clientes_ts`|Almacenar registros de usuario.|`bigfile`<br>`512M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk10/clientes_df.dbf`|
-|Cliente|`sesiones_ts`|Almacenar registros de actividad de usuario.|`bigfile`<br>`1G`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk11/sesiones_df.dbf`|
-|Cliente|`historial_ts`|Almacenar registros históricos de usuario.|`smallfile`<br>`1G`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk12/historial01_df.dbf`, `u01/app/oracle/oradata/ELROPROY/disk13/historial02_df.dbf`|
+|Gimnasio|`instalaciones_ts`|Almacenar registros de sitio fisico y digital del gimnasio.|`bigfile`<br>`10M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk06/instalaciones_df.dbf`|
+|Gimnasio|`inventario_ts`|Almacenar registros de estado de dispositivo.|`bigfile`<br>`50M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk07/inventario_df.dbf`|
+|Gimnasio|`empleados_ts`|Almacenar registros de la organizacion.|`bigfile`<br>`10M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk08/empleados_df.dbf`|
+|Gimnasio|`huellas_ts`|Optimizar consultas a tabla EMPLEADO.|`bigfile`<br>`50M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk09/huellas_df.dbf`|
+|Cliente|`clientes_ts`|Almacenar registros de usuario.|`bigfile`<br>`10M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk10/clientes_df.dbf`|
+|Cliente|`sesiones_ts`|Almacenar registros de actividad de usuario.|`bigfile`<br>`50M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk11/sesiones_df.dbf`|
+|Cliente|`historial_ts`|Almacenar registros históricos de usuario.|`smallfile`<br>`100M`<br>`extend management local autoallocate`<br>`segment space management auto`<br>`u01/app/oracle/oradata/ELROPROY/disk12/historial01_df.dbf`, `u01/app/oracle/oradata/ELROPROY/disk13/historial02_df.dbf`|
 
 ### Asignación de tablespace por objeto y módulo
 |Módulo|Tipo de segmento|Nombre de segmento|Nombre de tablespace|
 |:----:|:--------------:|:----------------:|:------------------:|
 |Gimnasio|Tabla|`PUESTO`|`empleados_ts`|
-|Gimnasio|Índice|`puesto_pk`|`empleados_ts`|
+|Gimnasio|Índice|`puesto_pk`|`indices_ts`|
 |Gimnasio|Tabla|`EMPLEADO`|`empleados_ts`|
-|Gimnasio|Índice|`empleado_pk`|`empleados_ts`|
+|Gimnasio|Índice|`empleado_pk`|`indices_ts`|
 |Gimnasio|Índice|`empleado_puesto_id_ix`|`indices_ts`|
 |Gimnasio|Índice|`empleado_foto_blob_ix`|`empleados_ts`|
 |Gimnasio|Columna|`empleado_foto`|`blob_ts`|
 |Gimnasio|Tabla|`ADMINISTRADOR`|`empleados_ts`|
-|Gimnasio|Índice|`administrador_pk`|`empleados_ts`|
+|Gimnasio|Índice|`administrador_pk`|`indices_ts`|
 |Gimnasio|Índice|`administrador_certificado_blob_ix`|`empleados_ts`|
 |Gimnasio|Columna|`administrador_certificado`|`blob_ts`|
 |Gimnasio|Tabla|`INSTRUCTOR`|`empleados_ts`|
-|Gimnasio|Índice|`instructor_pk`|`empleados_ts`|
+|Gimnasio|Índice|`instructor_pk`|`indices_ts`|
 |Cliente|Tabla|`CLIENTE`|`clientes_ts`|
-|Cliente|Índice|`cliente_pk`|`clientes_ts`|
+|Cliente|Índice|`cliente_pk`|`indices_ts`|
 |Cliente|Índice|`cliente_foto_blob_ix`|`clientes_ts`|
 |Cliente|Columna|`cliente_foto`|`blob_ts`|
 |Gimnasio|Tabla|`GIMNASIO`|`instalaciones_ts`|
-|Gimnasio|Índice|`gimnasio_pk`|`instalaciones_ts`|
-|Gimnasio|Tabla|`SALA`|`salas_ts`|
-|Gimnasio|índice|`sala_pk`|`salas_ts`|
+|Gimnasio|Índice|`gimnasio_pk`|`indices_ts`|
+|Gimnasio|Tabla|`SALA`|`instalaciones_ts`|
+|Gimnasio|índice|`sala_pk`|`indices_ts`|
 |Gimnasio|Índice|`sala_gimnasio_id_ix`|`indices_ix`|
 |Gimnasio|Índice|`sala_emp_admin_id_ix`|`indices_ix`|
 |Cliente|Tabla|`SESION`|`sesiones_ts`|
-|Cliente|Índice|`sesion_pk`|`sesiones_ts`|
+|Cliente|Índice|`sesion_pk`|`indices_ts`|
 |Cliente|Índice|`sesion_emp_inst_id_ix`|`indices_ts`|
 |Cliente|Índice|`sesion_cliente_id_ix`|`indices_ts`|
 |Cliente|Índice|`sesion_sala_id_ix`|`indices_ts`|
 |Cliente|Tabla|`BITACORA`|`historial_ts`|
-|Cliente|Índice|`bitacora_pk`|`historial_ts`|
+|Cliente|Índice|`bitacora_pk`|`indices_ts`|
 |Cliente|Índice|`bitacora_sesion_id_ix`|`indice_ts`|
 |Cliente|Tabla|`CREDENCIAL`|`clientes_ts`|
-|Cliente|Índice|`credencial_pk`|`clientes_ts`|
-|Gimnasio|Tabla|`DISCIPLINA`|`salas_ts`|
-|Gimnasio|Índice|`disciplina_pk`|`salas_ts`|
-|Gimnasio|Columna|`disciplina_icono_blob_ix`|`salas_ts`|
+|Cliente|Índice|`credencial_pk`|`indices_ts`|
+|Gimnasio|Tabla|`DISCIPLINA`|`instalaciones_ts`|
+|Gimnasio|Índice|`disciplina_pk`|`indices_ts`|
+|Gimnasio|Columna|`disciplina_icono_blob_ix`|`instalaciones_ts`|
 |Gimnasio|Columna|`disciplina_icono`|`blob_ts`|
 |Gimnasio|Tabla|`STATUS`|`inventario_ts`|
-|Gimnasio|Índice|`status_pk`|`inventario_ts`|
+|Gimnasio|Índice|`status_pk`|`indices_ts`|
 |Gimnasio|Tabla|`TIPO_DISPOSITIVO`|`inventario_ts`|
-|Gimnasio|Índice|`tipo_dispositivo_pk`|`inventario_ts`|
+|Gimnasio|Índice|`tipo_dispositivo_pk`|`indices_ts`|
 |Gimnasio|Tabla|`DISPOSITIVO`|`inventario_ts`|
-|Gimnasio|Índice|`dispositivo_pk`|`inventario_ts`|
+|Gimnasio|Índice|`dispositivo_pk`|`indices_ts`|
 |Gimnasio|Índice|`dispositivo_tipo_id_ix`|`indices_ts`|
 |Gimnasio|Índice|`dispositivo_sala_id_ix`|`indices_ts`|
 |Gimnasio|Índice|`dispositivo_status_id_ix`|`indices_ts`|
 |Gimnasio|Tabla|`HUELLA`|`huellas_ts`|
-|Gimnasio|índice|`huella_pk`|`huellas_ts`|
+|Gimnasio|índice|`huella_pk`|`indices_ts`|
 |Gimnasio|índice|`huella0_blob_ix`|`huellas_ts`|
 |Gimnasio|índice|`huella1_blob_ix`|`huellas_ts`|
 |Gimnasio|índice|`huella2_blob_ix`|`huellas_ts`|
@@ -203,29 +227,28 @@ Requerimientos no funcionales:
 |Gimnasio|Columna|`huella_huella8`|`huellas_ts`|
 |Gimnasio|Columna|`huella_huella9`|`huellas_ts`|
 |Gimnasio|Tabla|`INSTRUCTOR_WEB`|`empleados_ts`|
-|Gimnasio|Índice|`instructor_web_pk`|`empleados_ts`|
+|Gimnasio|Índice|`instructor_web_pk`|`indices_ts`|
 |Gimnasio|Tabla|`MULTIMEDIA`|`instalaciones_ts`|
-|Gimnasio|Índice|`multimedia_pk`|`instalaciones_ts`|
+|Gimnasio|Índice|`multimedia_pk`|`indices_ts`|
 |Gimnasio|Índice|`multimedia_gimnasio_id_ix`|`indices_ts`|
 |Gimnasio|índice|`multimedia_contenido_blob_ix`|`instalaciones_ts`|
 |Gimnasio|Columna|`multimedia_contenido`|`blob_ts`|
 |Cliente|Tabla|`REPORTE`|`historial_ts`|
-|Cliente|Índice|`reporte_pk`|`historial_ts`|
+|Cliente|Índice|`reporte_pk`|`indices_ts`|
 |Cliente|Índice|`reporte_cliente_id_ix`|`indicse_ts`|
-|Gimnasio|Tabla|`SALA_DISCIPLINA`|`salas_ts`|
-|Gimnasio|Índice|`sala_disciplina`|`salas_ts`|
+|Gimnasio|Tabla|`SALA_DISCIPLINA`|`instalaciones_ts`|
+|Gimnasio|Índice|`sala_disciplina_pk`|`indices_ts`|
 |Gimnasio|Índice|`sala_disciplina_sala_id_ix`|`indices_ts`|
 |Gimnasio|Índice|`sala_disciplina_id_ix`|`indices_ts`|
 |Cliente|Tabla|`SENSOR`|`clientes_ts`|
-|Cliente|Índice|`sensor_pk`|`clientes_ts`|
+|Cliente|Índice|`sensor_pk`|`indices_ts`|
 |Cliente|Índice|`sensor_cliente_id_ix`|`indices_ts`|
 |Cliente|Tabla|`SESION_DISPOSITIVO`|`sesiones_ts`|
-|Cliente|Índice|`sesion_dispositivo_pk`|`sesiones_ts`|
+|Cliente|Índice|`sesion_dispositivo_pk`|`indices_ts`|
 |Cliente|Índice|`sesion_dispositivo_sesion_id_ix`|`indice_ts`|
 |Cliente|Índice|`sesion_dispositivo_dispositivo_id_ix`|`indice_ts`|
 |Gimnasio|Tabla|`STATUS_DISPOSITIVO`|`inventario_ts`|
-|Gimnasio|Índice|`status_dispositivo`|`inventario_ts`|
-|Gimnasio|Índice|`status_dispositivo_fecha_status_ix`|`indice_ts`|
+|Gimnasio|Índice|`status_dispositivo_pk`|`indices_ts`|
 |Gimnasio|Índice|`status_dispositivo_dispositivo_id_ix`|`indice_ts`|
 |Gimnasio|Índice|`status_dispositivo_status_id_ix`|`indice_ts`|
 
