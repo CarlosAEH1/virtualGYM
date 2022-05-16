@@ -35,7 +35,7 @@ Requerimientos no funcionales:
 ### Scripts
 |Número|Nombre de script|Descripción|
 |:----:|:--------------:|:---------:|
-|1|[s-01-crea-loop-devices-root](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-01-crea-loop-devices-root.sh "s-01-crea-loop-devices-root")|Simula dispositivos de almacenamiento (Puede omitirse si se ha creado BD anteriormente).|
+|1|[s-01-crea-loop-devices-root](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-01-crea-loop-devices-root.sh "s-01-crea-loop-devices-root")|Simula dispositivos de almacenamiento.|
 |2|[s-02-crea-pwd-oracle](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-02-crea-pwd-oracle.sh "s-02-crea-pwd-oracle")|Crea archivo de passwords.|
 |3|[s-03-crea-pfile-oracle](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-03-crea-pfile-oracle.sh "s-03-crea-pfile-oracle")|Crea archivo PFILE.|
 |4|[s-04-crea-spfile-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-04-crea-spfile-ordinario.sql "s-04-crea-spfile-ordinario")|Crea archivo SPIFILE.|
