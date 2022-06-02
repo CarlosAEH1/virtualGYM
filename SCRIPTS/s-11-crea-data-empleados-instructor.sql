@@ -2,7 +2,7 @@
 --              -Elizarraras Herrera Carlos Amador
 --              -Rocha García Erick Hazel
 --@Fecha:       01/06/2022
---@Descripcion: Añade datos a la tabla empleado
+--@Descripcion: Añade datos a la tabla empleado tipo instructor
 
 insert into empleado (empleado_id, nombre, ap_pat, ap_mat, curp, num_trabajador, rfc, fecha_nacimiento, email, foto, tipo, puesto_id)
 values (
