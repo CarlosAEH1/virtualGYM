@@ -1,0 +1,38 @@
+Guardar REDO LOG FILES en FRA
+
+1- Consultar status INACTIVE de algun grupo.
+select
+group#,
+sequence#,
+bytes,
+bytes/(1024*1024) size_mb,
+blocksize,
+members,
+archived,
+status
+from v$log;
+
+2- Si no tiene status INACTIVO, forzar log switch hasta conseguirlo.
+alter system switch logfile;
+
+3- Eliminar grupo con status INACTIVE.
+alter database drop logfile group <n>;
+
+4- Almacenar un miembro de grupo en FRA
+alter database add logfile group <n> size 100M;
+
+5- Eliminar viejos miembros multiplexados de SO.
+rm /unam-bd/d01/app/oracle/oradata/ELROPROY/redo0<n>a.log
+rm /unam-bd/d02/app/oracle/oradata/ELROPROY/redo0<n>b.log
+rm /unam-bd/d03/app/oracle/oradata/ELROPROY/redo0<n>c.log
+
+6- Crear nuevos miembros multiplexados.
+alter database add logfile
+member '/unam-bd/d01/app/oracle/oradata/ELROPROY/redo0<n>a.log'
+to group <n>;
+alter database add logfile
+member '/unam-bd/d02/app/oracle/oradata/ELROPROY/redo0<n>b.log'
+to group <n>;
+alter database add logfile
+member '/unam-bd/d02/app/oracle/oradata/ELROPROY/redo0<n>b.log'
+to group <n>;

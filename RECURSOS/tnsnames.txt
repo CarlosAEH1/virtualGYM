@@ -1,3 +1,14 @@
+ELROPROY_POOLED =
+  (DESCRIPTION =
+    (ADDRESS_LIST =
+      (ADDRESS = (PROTOCOL = TCP)(HOST = pc-caeh.fi.unam)(PORT = 1521))
+    )
+    (CONNECT_DATA =
+      (SERVICE_NAME = elroproy.fi.unam)
+      (SERVER = POOLED)
+    )
+  )
+
 ELROPROY_SHARED =
   (DESCRIPTION =
     (ADDRESS_LIST =
