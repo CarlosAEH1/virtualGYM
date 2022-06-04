@@ -6,6 +6,9 @@
 # @Fecha        11/05/2022
 # @Descripcion  Crea archivo de passwords.
 
+#SYS="hola1234*"
+#SYSBACKUP="sysbackup"
+
 export ORACLE_SID=elroproy
 
 echo "Generando nuevo orapw${ORACLE_SID}"
