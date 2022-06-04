@@ -7,7 +7,7 @@
 # @Descripcion  Crea archivo de passwords.
 
 #SYS="hola1234*"
-#SYSBACKUP="sysbackup"
+#SYSBACKUP="hola1234*"
 
 export ORACLE_SID=elroproy
 
