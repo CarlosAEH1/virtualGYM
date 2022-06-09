@@ -44,7 +44,7 @@ Prompt Activando modo archivelog
 alter database archivelog;
 alter database open;
 
-Ṕrompt Verificando estado de modo archivelog
+Prompt Verificando estado de modo archivelog
 archive log list
 
 Prompt Respaldando spfile.
