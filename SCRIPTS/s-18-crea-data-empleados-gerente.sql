@@ -4,6 +4,8 @@
 --@Fecha:       01/06/2022
 --@Descripcion: Añade datos a la tabla empleado tipo gerente
 
+whenever sqlerror exit rollback
+
 insert into empleado (empleado_id, nombre, ap_pat, ap_mat, curp, num_trabajador, rfc, fecha_nacimiento, email, foto, tipo, puesto_id)
 values (
 4501,'Randa','Cadogan','Wilber','CAWR800410FGBPRX9','4501','CAWR800410WU6',to_date('10/04/1980','dd/mm/yyyy'),'rwilber0@list-manage.com',empty_blob(),'G',4501);
