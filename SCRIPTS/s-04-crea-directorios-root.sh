@@ -75,3 +75,30 @@ chmod -R 750 app
 
 echo "Mostrando directorios para control files y Redo Logs"
 ls -l /unam-bda/d0*/app/oracle/oradata
+
+echo "Creando directorio para FRA"
+cd /unam-bda
+mkdir fast-reco-area
+chown oracle:oinstall fast-reco-area
+chmod fast-reco-area
+
+echo "Mostrando directorio para FRA"
+ls -l /unam-bda/fast-reco-area
+
+echo "Creando directorio para modo archivelog"
+export ORACLE_SID=elroproy
+cd /unam-bda
+mkdir archivelogs
+chown oracle:oinstall archivelogs
+chmod 750 archivelogs
+cd archivelogs
+mkdir ${ORACLE_SID^^}
+chown oracle:oinstall ${ORACLE_SID^^}
+chmod 750 ${ORACLE_SID^^}
+cd ${ORACLE_SID^^}
+mkdir disk_a
+chown oracle:oinstall disk_a
+chmod 750 disk_a
+
+echo "Mostrando directorio para modo archivelog"
+ls -l /unam-bda/archivelogs/${ORACLE_SID^^}/disk_a
