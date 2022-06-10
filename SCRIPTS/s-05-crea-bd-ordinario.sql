@@ -4,6 +4,9 @@
 --@Fecha:       11/05/2022
 --@Descripcion: Crea base de datos.
 
+Prompt Inicializando ORACLE_SID
+!export ORACLE_SID=elroproy
+
 connect sys/hola1234* as sysdba
 
 Prompt Iniciando instancia en modo nomount.
