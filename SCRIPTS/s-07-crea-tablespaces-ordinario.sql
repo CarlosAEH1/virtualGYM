@@ -8,7 +8,15 @@ connect sys/system as sysdba
 
 create undo tablespace undo_ts
 datafile '/u01/app/oracle/oradata/ELROPROY/disk00/undo_df.dbf'
-size 10M autoextend on retention guarantee;
+size 500M autoextend on retention guarantee;
+
+show spparameter undo_tablespace
+alter system set undo_tablespace='undo_ts' scope=spfile;
+show spparameter undo_tablespace
+
+show spparameter undo_management
+alter system set undo_management='auto' scope=spfile;
+show spparameter undo_management
 
 create temporary tablespace temp_ts
 tempfile '/u01/app/oracle/oradata/ELROPROY/disk01/temp_df.dbf' size 20M;
@@ -19,13 +27,15 @@ create tablespace indices_ts
 datafile '/u01/app/oracle/oradata/ELROPROY/disk02/indices_df.dbf'
 size 50M autoextend on next 50M maxsize 500M
 extent management local autoallocate
-segment space management auto;
+segment space management auto
+nologging;
 
 create tablespace blob_indices_ts
 datafile '/u01/app/oracle/oradata/ELROPROY/disk03/indices_df.dbf'
 size 50M autoextend on next 50M maxsize 500M
 extent management local autoallocate
-segment space management auto;
+segment space management auto
+nologging;
 
 create tablespace blob_ts
 datafile
@@ -34,43 +44,50 @@ size 50M autoextend on next 50M maxsize 1G,
 '/u01/app/oracle/oradata/ELROPROY/disk05/blob02_df.dbf'
 size 50M autoextend on next 50M maxsize 1G
 extent management local autoallocate
-segment space management auto;
+segment space management auto
+nologging;
 
 create tablespace instalaciones_ts
 datafile '/u01/app/oracle/oradata/ELROPROY/disk06/instalaciones_df.dbf'
 size 10M autoextend on next 10M maxsize 500M
 extent management local autoallocate
-segment space management auto;
+segment space management auto
+nologging;
 
 create tablespace inventario_ts
 datafile '/u01/app/oracle/oradata/ELROPROY/disk07/inventario_df.dbf'
 size 50M autoextend on next 50M maxsize 500M
 extent management local autoallocate
-segment space management auto;
+segment space management auto
+nologging;
 
 create tablespace empleados_ts
 datafile '/u01/app/oracle/oradata/ELROPROY/disk08/empleados_df.dbf'
 size 10M autoextend on next 10M maxsize 500M
 extent management local autoallocate
-segment space management auto;
+segment space management auto
+nologging;
 
 create tablespace huellas_ts
 datafile '/u01/app/oracle/oradata/ELROPROY/disk09/huellas_df.dbf'
 size 50M autoextend on next 50M maxsize 500M
 extent management local autoallocate
-segment space management auto;
+segment space management auto
+nologging;
 
 create tablespace clientes_ts
 datafile '/u01/app/oracle/oradata/ELROPROY/disk10/clientes_df.dbf'
 size 10M autoextend on next 10M maxsize 500M
 extent management local autoallocate
-segment space management auto;
+segment space management auto
+nologging;
 
 create tablespace sesiones_ts
 datafile '/u01/app/oracle/oradata/ELROPROY/disk11/sesiones_df.dbf'
 size 50M autoextend on next 50M maxsize 500M
 extent management local autoallocate
-segment space management auto;
+segment space management auto
+nologging;
 
 create tablespace historial_ts
 datafile
@@ -79,7 +96,8 @@ size 50M autoextend on next 50M maxsize 1G,
 '/u01/app/oracle/oradata/ELROPROY/disk13/historial02_df.dbf'
 size 50M autoextend on next 50M maxsize 1G
 extent management local autoallocate
-segment space management auto;
+segment space management auto
+nologging;
 
 Prompt Listo
 exit
