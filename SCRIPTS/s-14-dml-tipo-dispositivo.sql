@@ -1,0 +1,10 @@
+insert into TIPO_DISPOSITIVO (tipo_dispositivo_id, nombre, descripcion) values (1, 'duis', 'tellus');
+insert into TIPO_DISPOSITIVO (tipo_dispositivo_id, nombre, descripcion) values (2, 'consequat', 'consequat nulla nisl nunc');
+insert into TIPO_DISPOSITIVO (tipo_dispositivo_id, nombre, descripcion) values (3, 'porttitor', 'convallis');
+insert into TIPO_DISPOSITIVO (tipo_dispositivo_id, nombre, descripcion) values (4, 'vel', 'in');
+insert into TIPO_DISPOSITIVO (tipo_dispositivo_id, nombre, descripcion) values (5, 'sed', 'congue etiam justo etiam pretium');
+insert into TIPO_DISPOSITIVO (tipo_dispositivo_id, nombre, descripcion) values (6, 'nulla', 'ante ipsum primis');
+insert into TIPO_DISPOSITIVO (tipo_dispositivo_id, nombre, descripcion) values (7, 'nisi', 'imperdiet nullam');
+insert into TIPO_DISPOSITIVO (tipo_dispositivo_id, nombre, descripcion) values (8, 'mauris', 'ipsum');
+insert into TIPO_DISPOSITIVO (tipo_dispositivo_id, nombre, descripcion) values (9, 'ligula', 'dolor morbi vel');
+insert into TIPO_DISPOSITIVO (tipo_dispositivo_id, nombre, descripcion) values (10, 'nulla', 'semper rutrum nulla nunc purus');
