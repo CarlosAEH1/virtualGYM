@@ -259,3 +259,25 @@ Requerimientos no funcionales:
 |:---------------:|:----------------:|:--------------------------:|:---------------------:|:-------------------:|
 |`gimnasio01`|`gimnasios_ts`|`temp_ts`|`undo_ts`|`create session`<br>`create table`<br>`create sequence`<br>`create procedure`<br>`create trigger`<br>`create synonym`<br>`create view`|
 |`cliente01`|`clientes_ts`|`temp_ts`|`undo_ts`|`create session`<br>`create table`<br>`create sequence`<br>`create procedure`<br>`create trigger`<br>`create synonym`<br>`create view`|
+
+
+## Programa de respaldos
+
+|Fecha y hora|Datos REDO producidos|Fecha de respaldo|Tipo de backup|Espaldos requerido por el backup|
+|:----------:|:-------------------:|:---------------:|:------------:|:------------------------------:|
+|`04-06-2022 15:00:00`|`0M`|`04-06-2022`|Incremental Nivel 0|`595.1M`|
+|`05-06-2022 15:00:00`|`80M`|`05-06-2022`|Diferencial Nivel 1|`111.3M`|
+|`05-06-2022 23:00:00`|`7M`|`05-06-2022`|Diferencial Nivel 1|`8.7M`|
+|`05-06-2022 23:10:00`|`4.1M`|`05-06-2022`|Cumulativo Nivel 1|`115.4M`|
+|`06-06-2022 19:10:00`|`18.4M`|`06-06-2022`|Diferencial Nivel 1|`21.8M`|
+|`07-06-2022 00:07:00`|`49.5M`|`06-06-2022`|Diferencial Nivel 1|`34.2M`|
+|`07-06-2022 00:17:00`|`0.1M`|`06-06-2022`|Cumulativo Nivel 1|`120.4M`|
+|`07-06-2022 15:08:00`|`15M`|`07-06-2022`|Diferencial Nivel 1|`18.1M`|
+|`07-06-2022 23:12:00`|`71.8M`|`07-06-2022`|Diferencial Nivel 1|`69.5M`|
+|`07-06-2022 23:16:00`|`0.1M`|`07-06-2022`|Cumulativo Nivel 1|`141.1M`|
+|`08-06-2022 15:18:00`|`42.2M`|`08-06-2022`|Diferencial Nivel 1|`33M`|
+|`09-06-2022 00:16:00`|`24.2M`|`08-06-2022`|Diferencial Nivel 1|`28.2M`|
+|`09-06-2022 00:23:00`|`39.6M`|`08-06-2022`|Cumulativo Nivel 1|`153.4M`|
+|`09-06-2022 12:28:00`|`22.1M`|`09-06-2022`|Diferencial Nivel 1|`33M`|
+|09-06-2022 00:16:00|24.2M|08-06-2022|Diferencial Nivel 1|28.2M|
+|09-06-2022 00:23:00|39.6M|08-06-2022|Cumulativo Nivel 1|153.4M|
