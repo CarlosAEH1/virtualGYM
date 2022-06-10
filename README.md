@@ -35,16 +35,28 @@ Requerimientos no funcionales:
 ### Scripts
 |Número|Nombre de script|Descripción|
 |:----:|:--------------:|:---------:|
-|1|[s-01-crea-pwd-oracle](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-02-crea-pwd-oracle.sh "s-02-crea-pwd-oracle")|Crea archivo de passwords.|
-|2|[s-02-crea-pfile-oracle](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-03-crea-pfile-oracle.sh "s-03-crea-pfile-oracle")|Crea archivo PFILE.|
-|3|[s-03-crea-spfile-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-04-crea-spfile-ordinario.sql "s-04-crea-spfile-ordinario")|Crea archivo SPIFILE.|
-|4|[s-04-crea-directorios-root](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-05-crea-directorios-root.sh "s-05-crea-directorios-root")|Crea directorios para BD.|
-|5|[s-05-crea-bd-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-06-crea-bd-ordinario.sql "s-06-crea-bd-ordinario")|Crea BD.|
-|6|[s-06-crea-diccionario-datos-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-07-crea-diccionario-datos-ordinario.sql "s-07-crea-diccionario-datos-ordinario")|Crea diccionario de datos.|
-|7|[s-07-crea-tablespaces-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-08-crea-tablespaces-ordinario.sql "s-09-crea-tablespaces-ordinario")|Crea tablespaces.|
+|1|[s-01-crea-pwd-oracle](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-01-crea-pwd-oracle.sh "s-02-crea-pwd-oracle")|Crea archivo de passwords.|
+|2|[s-02-crea-pfile-oracle](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-02-crea-pfile-oracle.sh "s-03-crea-pfile-oracle")|Crea archivo PFILE.|
+|3|[s-03-crea-spfile-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-03-crea-spfile-ordinario.sql "s-04-crea-spfile-ordinario")|Crea archivo SPIFILE.|
+|4|[s-04-crea-directorios-root](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-04-crea-directorios-root.sh "s-05-crea-directorios-root")|Crea directorios para BD.|
+|5|[s-05-crea-bd-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-05-crea-bd-ordinario.sql "s-06-crea-bd-ordinario")|Crea BD.|
+|6|[s-06-crea-diccionario-datos-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-06-crea-diccionario-datos-ordinario.sql "s-07-crea-diccionario-datos-ordinario")|Crea diccionario de datos.|
+|7|[s-07-crea-tablespaces-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-07-crea-tablespaces-ordinario.sql "s-09-crea-tablespaces-ordinario")|Crea tablespaces.|
 |8|[s-08-crea-usuarios-ordinario](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-08-crea-tablespaces-ordinario.sql "s-09-crea-usuarios-ordinario")|Crea usuarios y otorga permisos.|
 |9|[s-09-crea-objetos-00-ordinario.sql](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-09-crea-objetos-00-ordinario.sql "s-09-crea-objetos-00-ordinario.sql")|Crea objetos por módulo.|
 |10|[s-10-configura-modo-compartido-ordinario.sql](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-10-configura-modo-compartido-ordinario.sql "s-10-configura-modo-compartido-ordinario.sql")|Configura modo compartido.|
+|11|[s-11-configura-pool-conexiones-ordinario.sql](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-11-configura-pool-conexxiones-ordinario.sql "s-10-configura-pool-conexiones-ordinario.sql")|Configura pool de conexiones.|
+|12|[s-12-activa-fra-ordinario.sql](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-12-activa-fra-ordinario.sql "s-12-activa-fra-ordinario.sql")|Activa FRA.|
+|13|[s-13-activa-archivlog-ordinario.sql](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-13-activa-archivelog-ordinario.sql "s-13-activa-archivelog-ordinario.sql")|Configura modo archivelog.|
+|14|[s-14-carga-inicial-ordinario.sql](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-14-carga-inicial-ordinario.sql "s-14-carga-inicial-ordinario.sql")|Carga inicial por módulo.|
+|15|[s-15-activa-datos-redo-ordinario.sql](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-15-activa-datos-redo-ordinario.sql "s-15-activa-datos-redo-ordinario.sql")|Activa produccion de datos REDO.|
+|16|[s-16-configura-rman-oracle.sql](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-16-configura-rman-oracle.sql "s-16-configura-rman-oracle.sql")|Configura RMAN.|
+|17|[s-17-backup-0-oracle.rman](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-17-backup-0-oracle.rman"s-17-backup-0-oracle.rman")|Ejecuta backup nivel 0.|
+|18|[s-17-backup-1-diferencial-oracle.rman](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-17-backup-1-diferencial-oracle.rman"s-17-backup-1-diferencial-oracle.rman")|Ejecuta backup nivel 1 dierencial.|
+|19|[s-17-backup-1-cumulativo-oracle.rman](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-17-backup-1-cumulativo-oracle.rman"s-17-backup-1-cumulativo-oracle.rman")|Ejecuta backup nivel 1 cumulativo.|
+|20|[s-18-simula-carga-ordinario.sql](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-18-simula-carga-ordinario.sql"s-18-simula-carga-ordinario.sql")|Simula crga diaria por módulo.|
+|21|[s-19-instance-recovery-ordinario.sql](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-19-instance-recovery-ordinario.sql"s-19-instance-recovery-ordinario.sql")|Ejecuta instance recovery.|
+|22|[s-20-complete-media-recovery-ordinario.sql](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-20-complete-media-recovery-ordinario.sql"s-20-complete-medoa-recovery-ordinario.sql")|Ejecuta complete media recovery.|
 
 ### Configuración inicial
 |Configuración|Descripción|
