@@ -29,6 +29,12 @@ Requerimientos no funcionales:
 
 ![](DISENO_LOGICO/diseno.jpg)
 
+### Módulo de gimnasio
+![](DISENO_LOGICO/diseno_modulo_gimnasio.jpg)
+
+### Módulo de cliente
+![](DISENO_LOGICO/diseno_modulo_cliente.jpg)
+
 
 ## Creacion de BD
 
