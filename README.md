@@ -62,7 +62,7 @@ Requerimientos no funcionales:
 |19|[s-17-backup-1-cumulativo-oracle.rman](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-17-backup-1-cumulativo-oracle.rman"s-17-backup-1-cumulativo-oracle.rman")|Ejecuta backup nivel 1 cumulativo.|
 |20|[s-18-simula-carga-ordinario.sql](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-18-simula-carga-ordinario.sql"s-18-simula-carga-ordinario.sql")|Simula crga diaria por módulo.|
 |21|[s-19-instance-recovery-ordinario.sql](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-19-instance-recovery-ordinario.sql"s-19-instance-recovery-ordinario.sql")|Ejecuta instance recovery.|
-|22|[s-20-complete-media-recovery-ordinario.sql](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-20-complete-media-recovery-ordinario.sql"s-20-complete-medoa-recovery-ordinario.sql")|Ejecuta complete media recovery.|
+|22|[s-20-complete-media-recovery-oracle.rman](https://github.com/CarlosAEH1/virtualGYM/blob/main/SCRIPTS/s-20-complete-media-recovery-oracle.rman"s-20-complete-medoa-recovery-oracle.rman")|Ejecuta complete media recovery.|
 
 ### Configuración inicial
 |Configuración|Descripción|
