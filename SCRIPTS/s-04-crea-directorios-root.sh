@@ -60,34 +60,34 @@ echo "Mostrando directorio de data files"
 ls -l /u01/app/oracle/oradata
 
 echo "Creando directorios para Redo Log y control files"
-cd /unam-bda/d01
+cd /unam-bd/d01
 mkdir -p app/oracle/oradata/${ORACLE_SID^^}
 chown -R oracle:oinstall app
 chmod -R 750 app
-cd /unam-bda/d02
+cd /unam-bd/d02
 mkdir -p app/oracle/oradata/${ORACLE_SID^^}
 chown -R oracle:oinstall app
 chmod -R 750 app
-cd /unam-bda/d03
+cd /unam-bd/d03
 mkdir -p app/oracle/oradata/${ORACLE_SID^^}
 chown -R oracle:oinstall app
 chmod -R 750 app
 
 echo "Mostrando directorios para control files y Redo Logs"
-ls -l /unam-bda/d0*/app/oracle/oradata
+ls -l /unam-bd/d0*/app/oracle/oradata
 
 echo "Creando directorio para FRA"
-cd /unam-bda
+cd /unam-bd
 mkdir fast-reco-area
 chown oracle:oinstall fast-reco-area
 chmod fast-reco-area
 
 echo "Mostrando directorio para FRA"
-ls -l /unam-bda/fast-reco-area
+ls -l /unam-bd/fast-reco-area
 
 echo "Creando directorio para modo archivelog"
 export ORACLE_SID=elroproy
-cd /unam-bda
+cd /unam-bd
 mkdir archivelogs
 chown oracle:oinstall archivelogs
 chmod 750 archivelogs
@@ -101,4 +101,4 @@ chown oracle:oinstall disk_a
 chmod 750 disk_a
 
 echo "Mostrando directorio para modo archivelog"
-ls -l /unam-bda/archivelogs/${ORACLE_SID^^}/disk_a
+ls -l /unam-bd/archivelogs/${ORACLE_SID^^}/disk_a

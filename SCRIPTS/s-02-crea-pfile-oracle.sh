@@ -17,9 +17,9 @@ echo \
 memory_target=1G
 control_files=
 (
-  /unam-bda/d01/app/oracle/oradata/${ORACLE_SID^^}/control01.ctl,
-  /unam-bda/d02/app/oracle/oradata/${ORACLE_SID^^}/control02.ctl,
-  /unam-bda/d03/app/oracle/oradata/${ORACLE_SID^^}/control03.ctl
+  /unam-bd/d01/app/oracle/oradata/${ORACLE_SID^^}/control01.ctl,
+  /unam-bd/d02/app/oracle/oradata/${ORACLE_SID^^}/control02.ctl,
+  /unam-bd/d03/app/oracle/oradata/${ORACLE_SID^^}/control03.ctl
 )">$pfile
 echo "Listo"
 echo "Comprobando la existencia y contenido del PFILE"

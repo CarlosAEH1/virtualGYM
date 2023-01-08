@@ -20,21 +20,21 @@ create database elroproy
   logfile
   group 1
   (
-    '/unam-bda/d01/app/oracle/oradata/ELROPROY/redo01a.log',
-    '/unam-bda/d02/app/oracle/oradata/ELROPROY/redo01b.log',
-    '/unam-bda/d03/app/oracle/oradata/ELROPROY/redo01c.log'
+    '/unam-bd/d01/app/oracle/oradata/ELROPROY/redo01a.log',
+    '/unam-bd/d02/app/oracle/oradata/ELROPROY/redo01b.log',
+    '/unam-bd/d03/app/oracle/oradata/ELROPROY/redo01c.log'
   ) size 50m blocksize 512,
   group 2
   (
-    '/unam-bda/d01/app/oracle/oradata/ELROPROY/redo02a.log',
-    '/unam-bda/d02/app/oracle/oradata/ELROPROY/redo02b.log',
-    '/unam-bda/d03/app/oracle/oradata/ELROPROY/redo02c.log'
+    '/unam-bd/d01/app/oracle/oradata/ELROPROY/redo02a.log',
+    '/unam-bd/d02/app/oracle/oradata/ELROPROY/redo02b.log',
+    '/unam-bd/d03/app/oracle/oradata/ELROPROY/redo02c.log'
   ) size 50m blocksize 512,
   group 3
   (
-    '/unam-bda/d01/app/oracle/oradata/ELROPROY/redo03a.log',
-    '/unam-bda/d02/app/oracle/oradata/ELROPROY/redo03b.log',
-    '/unam-bda/d03/app/oracle/oradata/ELROPROY/redo03c.log'
+    '/unam-bd/d01/app/oracle/oradata/ELROPROY/redo03a.log',
+    '/unam-bd/d02/app/oracle/oradata/ELROPROY/redo03b.log',
+    '/unam-bd/d03/app/oracle/oradata/ELROPROY/redo03c.log'
   ) size 50m blocksize 512
   maxloghistory 1
   maxlogfiles 16

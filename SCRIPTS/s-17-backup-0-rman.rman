@@ -1,0 +1,8 @@
+run
+{
+	backup as backupset incremental level 0 database plus archivelog
+	tag backup_nivel_0;
+	report obsolete;
+	delete obsolete;
+}
+list backup;
